@@ -11,14 +11,7 @@ const SliderCard = () => {
       <div style={{ position: "absolute", top: 20, left: "13.4%", zIndex: 20 }}>
         <Header />
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-          position: "relative",
-        }}
-      >
+      <div className="flex relative justify-center">
         <div
           style={{
             width: "1800px",
