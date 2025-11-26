@@ -1,9 +1,9 @@
 import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import az from "./locales/az.json";
-import en from "./locales/en.json";
-import ru from "./locales/ru.json";
+import az from "./locales/az.json" with { type: "json" };
+import en from "./locales/en.json" with { type: "json" };
+import ru from "./locales/ru.json" with { type: "json" };
 
 i18next
   .use(initReactI18next)
