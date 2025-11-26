@@ -1,1 +1,22 @@
-{"root":["./vite.config.ts","./src/app.tsx","./src/main.tsx","./src/app/api/slider-card.api.ts","./src/app/lib/http.ts","./src/data/localization/tlocalization.ts","./src/data/localization/index.ts","./src/data/theme/ttheme.ts","./src/data/theme/theme.ts","./src/data/theme/utils.ts","./src/ui/modules/header/header.tsx","./src/ui/modules/header/headervm.ts","./src/ui/modules/home/home.tsx","./src/ui/modules/home/cards/slidercard.tsx","./src/ui/modules/home/cards/slidervm.ts","./src/ui/modules/translate/translate.tsx"],"errors":true,"version":"5.9.3"}
+{
+  "root": [
+    "./vite.config.ts",
+    "./src/app.tsx",
+    "./src/main.tsx",
+    "./src/app/api/slider-card.api.ts",
+    "./src/app/lib/http.ts",
+    "./src/data/localization/tlocalization.ts",
+    "./src/data/localization/index.ts",
+    "./src/data/theme/ttheme.ts",
+    "./src/data/theme/theme.ts",
+    "./src/data/theme/utils.ts",
+    "./src/ui/modules/header/header.tsx",
+    "./src/ui/modules/header/headervm.ts",
+    "./src/ui/modules/home/home.tsx",
+    "./src/ui/modules/home/cards/slidercard.tsx",
+    "./src/ui/modules/home/cards/slidervm.ts",
+    "./src/ui/modules/translate/translate.tsx"
+  ],
+  "errors": true,
+  "version": "5.9.3"
+}

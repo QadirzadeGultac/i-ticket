@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "NodeNext",
+    "module": "ESNext",
     "lib": ["DOM", "ESNext"],
     "jsx": "react-jsx",
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "Node",
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"]
@@ -13,6 +13,9 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
-  }
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true
+  },
+  "include": ["src"],
+  "exclude": ["dist", "node_modules"]
 }
