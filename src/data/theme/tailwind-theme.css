@@ -1,0 +1,117 @@
+@theme {
+  --color-primary: var(--mantine-color-blue-5);
+  --color-primary-to-white: var(--mantine-color-blue-5);
+  --color-primary-dark: var(--mantine-color-blue-9);
+
+  --font-sans: var(--mantine-font-family);
+
+  --color-lotion: #fafafa;
+  --color-navbar: var(--mantine-color-blue-9);
+  --color-white: var(--mantine-color-white);
+  --color-white-to-dark: var(--mantine-color-white);
+  --color-black: var(--mantine-color-black);
+  --color-error: var(--mantine-color-red-6);
+  --color-border: var(--mantine-color-gray-3);
+  --color-link: var(--mantine-color-anchor);
+  --color-gray-light: var(--mantine-color-gray-light);
+  --color-input-bg: var(--mantine-color-white);
+  --color-input-bd: var(--mantine-color-gray-4);
+  --color-input-error: var(--mantine-color-red-6);
+
+  --color-blue-50: var(--mantine-color-blue-0);
+  --color-blue-100: var(--mantine-color-blue-1);
+  --color-blue-200: var(--mantine-color-blue-2);
+  --color-blue-300: var(--mantine-color-blue-3);
+  --color-blue-400: var(--mantine-color-blue-4);
+  --color-blue-500: var(--mantine-color-blue-5);
+  --color-blue-600: var(--mantine-color-blue-6);
+  --color-blue-700: var(--mantine-color-blue-7);
+  --color-blue-800: var(--mantine-color-blue-8);
+  --color-blue-900: var(--mantine-color-blue-9);
+  --color-blue-950: var(--mantine-color-blue-10);
+
+  --color-gray-50: var(--mantine-color-gray-0);
+  --color-gray-100: var(--mantine-color-gray-1);
+  --color-gray-200: var(--mantine-color-gray-2);
+  --color-gray-300: var(--mantine-color-gray-3);
+  --color-gray-400: var(--mantine-color-gray-4);
+  --color-gray-500: var(--mantine-color-gray-5);
+  --color-gray-600: var(--mantine-color-gray-6);
+  --color-gray-700: var(--mantine-color-gray-7);
+  --color-gray-800: var(--mantine-color-gray-8);
+  --color-gray-900: var(--mantine-color-gray-9);
+
+  --color-dark-50: var(--mantine-color-dark-0);
+  --color-dark-100: var(--mantine-color-dark-1);
+  --color-dark-200: var(--mantine-color-dark-2);
+  --color-dark-300: var(--mantine-color-dark-3);
+  --color-dark-400: var(--mantine-color-dark-4);
+  --color-dark-500: var(--mantine-color-dark-5);
+  --color-dark-600: var(--mantine-color-dark-6);
+  --color-dark-700: var(--mantine-color-dark-7);
+  --color-dark-800: var(--mantine-color-dark-8);
+  --color-dark-900: var(--mantine-color-dark-9);
+
+  --color-red-50: var(--mantine-color-red-0);
+  --color-red-100: var(--mantine-color-red-1);
+  --color-red-200: var(--mantine-color-red-2);
+  --color-red-300: var(--mantine-color-red-3);
+  --color-red-400: var(--mantine-color-red-4);
+  --color-red-500: var(--mantine-color-red-5);
+  --color-red-600: var(--mantine-color-red-6);
+  --color-red-700: var(--mantine-color-red-7);
+  --color-red-800: var(--mantine-color-red-8);
+  --color-red-900: var(--mantine-color-red-9);
+
+  --radius-xs: var(--mantine-radius-xs);
+  --radius-sm: var(--mantine-radius-sm);
+  --radius-md: var(--mantine-radius-md);
+  --radius-lg: var(--mantine-radius-lg);
+  --radius-xl: var(--mantine-radius-xl);
+
+  /* --breakpoint-xs: var(--mantine-breakpoint-xs);
+  --breakpoint-sm: var(--mantine-breakpoint-sm);
+  --breakpoint-md: var(--mantine-breakpoint-md);
+  --breakpoint-lg: var(--mantine-breakpoint-lg);
+  --breakpoint-xl: var(--mantine-breakpoint-xl); */
+
+  --text-xs: var(--mantine-font-size-xs);
+  --text-sm: var(--mantine-font-size-sm);
+  --text-md: var(--mantine-font-size-md);
+  --text-lg: var(--mantine-font-size-lg);
+  --text-xl: var(--mantine-font-size-xl);
+
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-7: 1.75rem;
+  --spacing-8: 2rem;
+  --spacing-9: 2.25rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-18: 4.5rem;
+
+  --shadow-card: rgba(99, 99, 99, 0.2) 0px 1px 5px 0px;
+  --shadow-box: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12);
+  --shadow-button: 0px 4px 8px -4px rgba(76, 78, 100, 0.42);
+}
+
+[data-mantine-color-scheme="dark"] {
+  --color-lotion: var(--mantine-color-dark-7);
+  --color-navbar: var(--mantine-color-dark-5);
+  --color-white-to-dark: var(--mantine-color-dark-5);
+  --color-primary-to-white: var(--mantine-color-white);
+  --color-black: var(--mantine-color-white);
+  --color-input-bg: var(--mantine-color-dark-6);
+  --color-input-bd: var(--mantine-color-dark-4);
+  --color-border: var(--mantine-color-dark-4);
+
+  --mantine-color-body: var(--mantine-color-dark-5);
+}
+
+[data-error="true"] {
+  --color-input-bd: var(--mantine-color-red-6);
+}

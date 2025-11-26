@@ -1,0 +1,57 @@
+/* DO NOT TOUCH THIS FILE !! */
+
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+@font-face {
+  font-family: "Mulish";
+  src: url("../assets/fonts/Mulish/Mulish-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mulish";
+  src: url("../assets/fonts/Mulish/Mulish-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "IBM";
+  src: url("../assets/fonts/IBM_Plex/IBMPlexSans-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM";
+  src: url("../assets/fonts/IBM_Plex/IBMPlexSans-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+@layer theme, base, mantine, components, utilities;
+
+@import "./animations.css";
+
+@import "./tailwind-utils.css";
+
+@import "./tailwind-theme.css";
+
+@import "tailwindcss";
+
+@import "@mantine/core/styles.layer.css";
+
+@custom-variant dark (&:where([data-mantine-color-scheme=dark] *));
