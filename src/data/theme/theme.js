@@ -1,5 +1,5 @@
 import { createTheme } from "@mantine/core";
-export var theme = createTheme({
+export const theme = createTheme({
     colors: {
         blue: [
             "#e8f4fd",

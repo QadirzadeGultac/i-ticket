@@ -1,6 +1,5 @@
-export var roundSizes = function (rounded) {
-    if (rounded === void 0) { rounded = "md"; }
-    var classes = {
+export const roundSizes = (rounded = "md") => {
+    const classes = {
         sm: {
             roundedTl: "rounded-tl-sm",
             roundedTr: "rounded-tr-sm",
@@ -32,8 +31,8 @@ export var roundSizes = function (rounded) {
     };
     return classes[rounded];
 };
-export var textAligns = function (align) {
-    var classes = {
+export const textAligns = (align) => {
+    const classes = {
         left: "text-left",
         center: "text-center",
         right: "text-right",

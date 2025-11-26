@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { fetchPromotionById } from "@/app/api/slider-card.api";
 
 const SliderVM = ({ intervalMs = 3000 }) => {
-  const [imgs, setImgs] = useState([]);
+  const [imgs, setImgs] = useState<string[]>([]);
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
