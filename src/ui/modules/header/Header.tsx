@@ -54,15 +54,16 @@ const Header = () => {
         </svg>
       </div>
       <Translate />
-      <div className="flex gap-15 ml-10">
-        <ul className="flex text-white list-none size-1.25rem pr-1.25rem font-bold!">
+      <div className="flex gap-15 ml-10 align-center">
+        <ul className="flex text-white align-center list-none size-1.25rem pr-1.25rem font-bold!">
           <li
             className="w-28 relative whitespace-nowrap leading-7"
             style={{
+              display: "flex",
+              alignItems: "center",
               fontFamily: "SF Pro Display",
               fontSize: "1.25rem",
               fontWeight: "700",
-              marginBottom: "1rem",
             }}
           >
             {t("header.All_events")}
@@ -70,10 +71,11 @@ const Header = () => {
           <li
             className="w-28 relative whitespace-nowrap leading-7"
             style={{
+              display: "flex",
+              alignItems: "center",
               fontFamily: "SF Pro Display",
               fontSize: "1.25rem",
               fontWeight: "700",
-              marginBottom: "1rem",
             }}
           >
             {t("header.Concert")}
@@ -81,10 +83,11 @@ const Header = () => {
           <li
             className="w-28 relative whitespace-nowrap leading-7"
             style={{
+              display: "flex",
+              alignItems: "center",
               fontFamily: "SF Pro Display",
               fontSize: "1.25rem",
               fontWeight: "700",
-              marginBottom: "1rem",
             }}
           >
             {t("header.Theatre")}
@@ -92,10 +95,11 @@ const Header = () => {
           <li
             className="w-28 relative whitespace-nowrap leading-7"
             style={{
+              display: "flex",
+              alignItems: "center",
               fontFamily: "SF Pro Display",
               fontSize: "1.25rem",
               fontWeight: "700",
-              marginBottom: "1rem",
             }}
           >
             {t("header.Kids")}
@@ -103,10 +107,11 @@ const Header = () => {
           <li
             className="w-45 relative whitespace-nowrap leading-7"
             style={{
+              display: "flex",
+              alignItems: "center",
               fontFamily: "SF Pro Display",
               fontSize: "1.25rem",
               fontWeight: "700",
-              marginBottom: "1rem",
             }}
           >
             {t("header.Dream_Fest_2026")}
@@ -114,10 +119,11 @@ const Header = () => {
           <li
             className="w-28 relative whitespace-nowrap leading-7"
             style={{
+              display: "flex",
+              alignItems: "center",
               fontFamily: "SF Pro Display",
               fontSize: "1.25rem",
               fontWeight: "700",
-              marginBottom: "1rem",
             }}
           >
             {t("header.Sport")}
