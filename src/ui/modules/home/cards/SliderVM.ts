@@ -13,7 +13,7 @@ const SliderVM = ({ intervalMs = 3000 }) => {
       for (let i = 0; i < 7; i++) {
         const data = await fetchPromotionById(0, i);
 
-        console.log("API DATA", data); // BURDA URL-lər görünür
+        // console.log("API DATA", data); // BURDA URL-lər görünür
 
         // data birbaşa url-dirsə:
         arr.push(data);
@@ -52,7 +52,7 @@ const SliderVM = ({ intervalMs = 3000 }) => {
     );
   };
 
-  console.log("ACTIVE IMG:", imgs[currentIndex]);
+  // console.log("ACTIVE IMG:", imgs[currentIndex]);
 
   return {
     img: imgs[currentIndex],

@@ -1,5 +1,36 @@
 @import "tailwindcss";
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../public/fonts/SFProDisplay-Bold.1c2dc0d.woff2") format("woff2"),
+       url("../public/fonts/SFProDisplay-Bold.1c2dc0d.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+    font-display: swap;
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../public/fonts/SFProDisplay-Regular.68dd00a.woff2") format("woff2"),url("../public/fonts/SFProDisplay-Regular.2ee6eb0.woff") format("woff")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    src: url("../public/fonts/SFProDisplay-Medium.062b618.woff2") format("woff2"),url("../public/fonts/SFProDisplay-Medium.d6311c2.woff") format("woff")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 600;
+    src: url("../public/fonts/SFProDisplay-Semibold.3926eb6.woff2") format("woff2"),url("../public/fonts/SFProDisplay-Semibold.340c3a1.woff") format("woff")
+}
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

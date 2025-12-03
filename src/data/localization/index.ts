@@ -13,8 +13,8 @@ i18next
       en: { translation: en },
       ru: { translation: ru },
     },
-    lng: "az",         // default dil
-    fallbackLng: "az",
+    lng: "en",         // default dil
+    fallbackLng: "en",
     interpolation: {
       escapeValue: false,
     },

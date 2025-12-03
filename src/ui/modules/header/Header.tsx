@@ -1,12 +1,13 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import Translate from "../translate/Translate";
+import "@/index.css";
 const Header = () => {
   const { t } = useTranslation();
   return (
     <div
-      style={{ width: 200, height: 36, paddingTop: 44, paddingLeft: 38 }}
-      className="flex items-center justify-between w-full h-16 pt-11 pl-10"
+      // style={{ width: 200, height: 36, paddingTop: 44, paddingLeft: 38 }}
+      className="w-1420px flex items-center justify-start mx-auto py-8 px-14"
     >
       <div>
         <svg
@@ -53,14 +54,14 @@ const Header = () => {
         </svg>
       </div>
       <Translate />
-      <div className="flex gap-5 ml-5">
-        <ul className="flex text-white list-none size-1.25rem pr-1.25rem">
-          <li className="w-28">{t("header.All_events")}</li>
-          <li className="w-28">{t("header.Concert")}</li>
-          <li className="w-28">{t("header.Theatre")}</li>
-          <li className="w-28">{t("header.Kids")}</li>
-          <li className="w-28">{t("header.Dream_Fest_2026")}</li>
-          <li className="w-28">{t("header.Sport")}</li>
+      <div className="flex gap-15 ml-10">
+        <ul className="flex text-white list-none size-1.25rem pr-1.25rem font-bold!">
+          <li className="w-28 relative whitespace-nowrap leading-7" style={{fontFamily: "SF Pro Display", fontSize: "1.25rem", fontWeight: "700", marginBottom: "1rem"}}>{t("header.All_events")}</li>
+          <li className="w-28 relative whitespace-nowrap leading-7" style={{fontFamily: "SF Pro Display", fontSize: "1.25rem", fontWeight: "700", marginBottom: "1rem"}}>{t("header.Concert")}</li>
+          <li className="w-28 relative whitespace-nowrap leading-7" style={{fontFamily: "SF Pro Display", fontSize: "1.25rem", fontWeight: "700", marginBottom: "1rem"}}>{t("header.Theatre")}</li>
+          <li className="w-28 relative whitespace-nowrap leading-7" style={{fontFamily: "SF Pro Display", fontSize: "1.25rem", fontWeight: "700", marginBottom: "1rem"}}>{t("header.Kids")}</li>
+          <li className="w-45 relative whitespace-nowrap leading-7" style={{fontFamily: "SF Pro Display", fontSize: "1.25rem", fontWeight: "700", marginBottom: "1rem"}}>{t("header.Dream_Fest_2026")}</li>
+          <li className="w-28 relative whitespace-nowrap leading-7" style={{fontFamily: "SF Pro Display", fontSize: "1.25rem", fontWeight: "700", marginBottom: "1rem"}}>{t("header.Sport")}</li>
         </ul>
       </div>
     </div>
