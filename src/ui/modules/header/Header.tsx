@@ -7,11 +7,11 @@ const Header = () => {
   return (
     <div
       // style={{ width: 200, height: 36, paddingTop: 44, paddingLeft: 38 }}
-      className="w-1420px flex items-center justify-start mx-auto py-8 px-14"
+      className="w-[1420px] flex items-center justify-start mx-auto py-8 px-14"
     >
       <div>
         <svg
-        className="w-40 h-9"
+          className="w-40 h-9"
           // width={160}
           height={36}
           viewBox="0 0 160 43"
@@ -56,13 +56,82 @@ const Header = () => {
       <Translate />
       <div className="flex gap-15 ml-10">
         <ul className="flex text-white list-none size-1.25rem pr-1.25rem font-bold!">
-          <li className="w-28 relative whitespace-nowrap leading-7" style={{fontFamily: "SF Pro Display", fontSize: "1.25rem", fontWeight: "700", marginBottom: "1rem"}}>{t("header.All_events")}</li>
-          <li className="w-28 relative whitespace-nowrap leading-7" style={{fontFamily: "SF Pro Display", fontSize: "1.25rem", fontWeight: "700", marginBottom: "1rem"}}>{t("header.Concert")}</li>
-          <li className="w-28 relative whitespace-nowrap leading-7" style={{fontFamily: "SF Pro Display", fontSize: "1.25rem", fontWeight: "700", marginBottom: "1rem"}}>{t("header.Theatre")}</li>
-          <li className="w-28 relative whitespace-nowrap leading-7" style={{fontFamily: "SF Pro Display", fontSize: "1.25rem", fontWeight: "700", marginBottom: "1rem"}}>{t("header.Kids")}</li>
-          <li className="w-45 relative whitespace-nowrap leading-7" style={{fontFamily: "SF Pro Display", fontSize: "1.25rem", fontWeight: "700", marginBottom: "1rem"}}>{t("header.Dream_Fest_2026")}</li>
-          <li className="w-28 relative whitespace-nowrap leading-7" style={{fontFamily: "SF Pro Display", fontSize: "1.25rem", fontWeight: "700", marginBottom: "1rem"}}>{t("header.Sport")}</li>
+          <li
+            className="w-28 relative whitespace-nowrap leading-7"
+            style={{
+              fontFamily: "SF Pro Display",
+              fontSize: "1.25rem",
+              fontWeight: "700",
+              marginBottom: "1rem",
+            }}
+          >
+            {t("header.All_events")}
+          </li>
+          <li
+            className="w-28 relative whitespace-nowrap leading-7"
+            style={{
+              fontFamily: "SF Pro Display",
+              fontSize: "1.25rem",
+              fontWeight: "700",
+              marginBottom: "1rem",
+            }}
+          >
+            {t("header.Concert")}
+          </li>
+          <li
+            className="w-28 relative whitespace-nowrap leading-7"
+            style={{
+              fontFamily: "SF Pro Display",
+              fontSize: "1.25rem",
+              fontWeight: "700",
+              marginBottom: "1rem",
+            }}
+          >
+            {t("header.Theatre")}
+          </li>
+          <li
+            className="w-28 relative whitespace-nowrap leading-7"
+            style={{
+              fontFamily: "SF Pro Display",
+              fontSize: "1.25rem",
+              fontWeight: "700",
+              marginBottom: "1rem",
+            }}
+          >
+            {t("header.Kids")}
+          </li>
+          <li
+            className="w-45 relative whitespace-nowrap leading-7"
+            style={{
+              fontFamily: "SF Pro Display",
+              fontSize: "1.25rem",
+              fontWeight: "700",
+              marginBottom: "1rem",
+            }}
+          >
+            {t("header.Dream_Fest_2026")}
+          </li>
+          <li
+            className="w-28 relative whitespace-nowrap leading-7"
+            style={{
+              fontFamily: "SF Pro Display",
+              fontSize: "1.25rem",
+              fontWeight: "700",
+              marginBottom: "1rem",
+            }}
+          >
+            {t("header.Sport")}
+          </li>
         </ul>
+      </div>
+      <div style={{width: "50px", height: "50px", padding: 15}}>
+        <svg style={{width:20, height: 20}} viewBox="0 0 34 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M29.6201 4.6423C28.0671 2.93842 25.9362 2 23.6195 2C21.8878 2 20.3018 2.55384 18.9057 3.646C18.2012 4.19729 17.5628 4.87175 17 5.65898C16.4374 4.87199 15.7988 4.19729 15.0941 3.646C13.6982 2.55384 12.1122 2 10.3805 2C8.06377 2 5.93265 2.93842 4.37968 4.6423C2.84526 6.32627 2 8.62682 2 11.1205C2 13.6871 2.94551 16.0365 4.97546 18.5144C6.79141 20.7309 9.40135 22.981 12.4237 25.5864C13.4558 26.4762 14.6256 27.4848 15.8403 28.5592C16.1611 28.8435 16.5729 29 17 29C17.4269 29 17.8389 28.8435 18.1593 28.5596C19.374 27.4851 20.5445 26.476 21.577 25.5858C24.5989 22.9807 27.2088 20.7309 29.0248 18.5141C31.0547 16.0365 32 13.6871 32 11.1202C32 8.62682 31.1547 6.32627 29.6201 4.6423Z"
+            stroke="white"
+            stroke-width="3"
+          ></path>
+        </svg>
       </div>
     </div>
   );
