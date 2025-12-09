@@ -1,6 +1,8 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import Translate from "../translate/Translate";
+import { NavLink } from "react-router-dom";
+import { Button } from "@mantine/core";
 import "@/index.css";
 const Header = () => {
   const { t } = useTranslation();
@@ -53,11 +55,12 @@ const Header = () => {
           ></path>
         </svg>
       </div>
-      <Translate />
       <div className="flex gap-15 ml-10 align-center">
+        <Translate />
+
         <ul className="flex text-white align-center list-none size-1.25rem pr-1.25rem font-bold!">
           <li
-            className="w-28 relative whitespace-nowrap leading-7"
+            className="w-28 relative whitespace-nowrap leading-7 pr-5"
             style={{
               display: "flex",
               alignItems: "center",
@@ -66,10 +69,32 @@ const Header = () => {
               fontWeight: "700",
             }}
           >
-            {t("header.All_events")}
+            <NavLink
+              to="/events"
+              className={({ isActive }) => `
+    relative
+    before:content-['']
+    before:absolute
+    before:left-0
+    before:bottom-[-9px]
+    before:right-5
+    before:h-[9px]
+    before:opacity-0
+    before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
+    before:bg-no-repeat
+    before:bg-center
+    before:bg-size-[100px]
+    before:transition-opacity
+    before:duration-300
+    hover:before:opacity-100
+    ${isActive ? "before:opacity-100" : ""}
+  `}
+            >
+              {t("header.All_events")}
+            </NavLink>
           </li>
           <li
-            className="w-28 relative whitespace-nowrap leading-7"
+            className="w-28 relative whitespace-nowrap leading-7 pr-5"
             style={{
               display: "flex",
               alignItems: "center",
@@ -78,10 +103,28 @@ const Header = () => {
               fontWeight: "700",
             }}
           >
-            {t("header.Concert")}
+            <NavLink
+              to="/concerts"
+              className="relative
+    before:content-['']
+    before:absolute
+    before:left-0
+    before:bottom-[-9px]
+    before:right-5
+    before:h-[9px]
+    before:opacity-0
+    before:bg-no-repeat
+    before:bg-center
+    before:bg-size-[100px]
+    before:transition-opacity
+    before:duration-300
+    hover:before:opacity-100"
+            >
+              {t("header.Concert")}
+            </NavLink>
           </li>
           <li
-            className="w-28 relative whitespace-nowrap leading-7"
+            className="w-28 relative whitespace-nowrap leading-7 pr-5"
             style={{
               display: "flex",
               alignItems: "center",
@@ -90,10 +133,32 @@ const Header = () => {
               fontWeight: "700",
             }}
           >
-            {t("header.Theatre")}
+            <NavLink
+              to="/theatre"
+              className={({ isActive }) => `
+    relative
+    before:content-['']
+    before:absolute
+    before:left-0
+    before:bottom-[-9px]
+    before:right-5
+    before:h-[9px]
+    before:opacity-0
+    before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
+    before:bg-no-repeat
+    before:bg-center
+    before:bg-size-[100px]
+    before:transition-opacity
+    before:duration-300
+    hover:before:opacity-100
+    ${isActive ? "before:opacity-100" : ""}
+  `}
+            >
+              {t("header.Theatre")}
+            </NavLink>
           </li>
           <li
-            className="w-28 relative whitespace-nowrap leading-7"
+            className="w-28 relative whitespace-nowrap leading-7 pr-5"
             style={{
               display: "flex",
               alignItems: "center",
@@ -102,10 +167,32 @@ const Header = () => {
               fontWeight: "700",
             }}
           >
-            {t("header.Kids")}
+            <NavLink
+              to="/kids"
+              className={({ isActive }) => `
+    relative
+    before:content-['']
+    before:absolute
+    before:left-0
+    before:bottom-[-9px]
+    before:right-5
+    before:h-[9px]
+    before:opacity-0
+    before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
+    before:bg-no-repeat
+    before:bg-center
+    before:bg-size-[100px]
+    before:transition-opacity
+    before:duration-300
+    hover:before:opacity-100
+    ${isActive ? "before:opacity-100" : ""}
+  `}
+            >
+              {t("header.Kids")}
+            </NavLink>
           </li>
           <li
-            className="w-45 relative whitespace-nowrap leading-7"
+            className="w-45 relative whitespace-nowrap leading-7 pr-5"
             style={{
               display: "flex",
               alignItems: "center",
@@ -114,10 +201,32 @@ const Header = () => {
               fontWeight: "700",
             }}
           >
-            {t("header.Dream_Fest_2026")}
+            <NavLink
+              to="/dream-fest-2026"
+              className={({ isActive }) => `
+    relative
+    before:content-['']
+    before:absolute
+    before:left-0
+    before:bottom-[-9px]
+    before:right-5
+    before:h-[9px]
+    before:opacity-0
+    before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
+    before:bg-no-repeat
+    before:bg-center
+    before:bg-size-[100px]
+    before:transition-opacity
+    before:duration-300
+    hover:before:opacity-100
+    ${isActive ? "before:opacity-100" : ""}
+  `}
+            >
+              {t("header.Dream_Fest_2026")}
+            </NavLink>
           </li>
           <li
-            className="w-28 relative whitespace-nowrap leading-7"
+            className="w-28 relative whitespace-nowrap leading-7 pr-5"
             style={{
               display: "flex",
               alignItems: "center",
@@ -126,18 +235,72 @@ const Header = () => {
               fontWeight: "700",
             }}
           >
-            {t("header.Sport")}
+            <NavLink
+              to="/sport"
+              className={({ isActive }) => `
+    relative
+    before:content-['']
+    before:absolute
+    before:left-0
+    before:bottom-[-9px]
+    before:right-5
+    before:h-[9px]
+    before:opacity-0
+    before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
+    before:bg-no-repeat
+    before:bg-center
+    before:bg-size-[100px]
+    before:transition-opacity
+    before:duration-300
+    hover:before:opacity-100
+    ${isActive ? "before:opacity-100" : ""}
+  `}
+            >
+              {t("header.Sport")}
+            </NavLink>
           </li>
         </ul>
       </div>
-      <div style={{width: "50px", height: "50px", padding: 15}}>
-        <svg style={{width:20, height: 20}} viewBox="0 0 34 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div style={{ width: "50px", height: "50px", padding: 15 }}>
+        <svg
+          style={{ width: 20, height: 20 }}
+          viewBox="0 0 34 31"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path
             d="M29.6201 4.6423C28.0671 2.93842 25.9362 2 23.6195 2C21.8878 2 20.3018 2.55384 18.9057 3.646C18.2012 4.19729 17.5628 4.87175 17 5.65898C16.4374 4.87199 15.7988 4.19729 15.0941 3.646C13.6982 2.55384 12.1122 2 10.3805 2C8.06377 2 5.93265 2.93842 4.37968 4.6423C2.84526 6.32627 2 8.62682 2 11.1205C2 13.6871 2.94551 16.0365 4.97546 18.5144C6.79141 20.7309 9.40135 22.981 12.4237 25.5864C13.4558 26.4762 14.6256 27.4848 15.8403 28.5592C16.1611 28.8435 16.5729 29 17 29C17.4269 29 17.8389 28.8435 18.1593 28.5596C19.374 27.4851 20.5445 26.476 21.577 25.5858C24.5989 22.9807 27.2088 20.7309 29.0248 18.5141C31.0547 16.0365 32 13.6871 32 11.1202C32 8.62682 31.1547 6.32627 29.6201 4.6423Z"
             stroke="white"
             stroke-width="3"
           ></path>
         </svg>
+      </div>
+      <div>
+        <Button
+          style={{ width: "50px", height: "50px", padding: 15 }}
+          className="bg-transparent!"
+        >
+          <svg
+            className="w-5 h-5 text-white"
+            viewBox="0 0 19 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="7.5"
+              cy="7.5"
+              r="6.5"
+              stroke="currentColor"
+              strokeWidth="2"
+            />
+            <path
+              d="M13 13L17 17"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="square"
+            />
+          </svg>
+        </Button>
       </div>
     </div>
   );
