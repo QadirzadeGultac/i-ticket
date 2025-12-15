@@ -8,7 +8,7 @@ const SliderCard = () => {
 
   return (
     <div>
-      <div style={{ position: "absolute", top: 20, left: "13.4%", zIndex: 20 }}>
+      <div style={{ position: "absolute", top: 20, zIndex: 60 }}>
         <Header />
       </div>
       <div className="flex relative justify-center">

@@ -3,15 +3,16 @@ import { useTranslation } from "react-i18next";
 import Translate from "../translate/Translate";
 import { NavLink } from "react-router-dom";
 import { Button } from "@mantine/core";
+import User from "@/assets/image.png";
 import "@/index.css";
 const Header = () => {
   const { t } = useTranslation();
   return (
     <div
       // style={{ width: 200, height: 36, paddingTop: 44, paddingLeft: 38 }}
-      className="w-[1420px] flex items-center justify-start mx-auto py-8 px-14"
+      className="w-[1432px] h-[124px] flex items-center justify-start mx-auto px-14 py-8 ml-[220px] mr-[220px]"
     >
-      <div>
+      <div className="ml-[17px] mr-[20px]">
         <svg
           className="w-40 h-9"
           // width={160}
@@ -55,12 +56,14 @@ const Header = () => {
           ></path>
         </svg>
       </div>
-      <div className="flex gap-15 ml-10 align-center">
-        <Translate />
 
+      <div className="flex align-center w-[850px]">
+        <div>
+          <Translate />
+        </div>
         <ul className="flex text-white align-center list-none size-1.25rem pr-1.25rem font-bold!">
           <li
-            className="w-28 relative whitespace-nowrap leading-7 pr-5"
+            className="w-auto relative whitespace-nowrap leading-7 pr-5"
             style={{
               display: "flex",
               alignItems: "center",
@@ -94,7 +97,7 @@ const Header = () => {
             </NavLink>
           </li>
           <li
-            className="w-28 relative whitespace-nowrap leading-7 pr-5"
+            className="w-auto relative whitespace-nowrap leading-7 pr-5"
             style={{
               display: "flex",
               alignItems: "center",
@@ -124,7 +127,7 @@ const Header = () => {
             </NavLink>
           </li>
           <li
-            className="w-28 relative whitespace-nowrap leading-7 pr-5"
+            className="w-auto relative whitespace-nowrap leading-7 pr-5"
             style={{
               display: "flex",
               alignItems: "center",
@@ -158,7 +161,7 @@ const Header = () => {
             </NavLink>
           </li>
           <li
-            className="w-28 relative whitespace-nowrap leading-7 pr-5"
+            className="w-auto relative whitespace-nowrap leading-7 pr-5"
             style={{
               display: "flex",
               alignItems: "center",
@@ -192,7 +195,7 @@ const Header = () => {
             </NavLink>
           </li>
           <li
-            className="w-45 relative whitespace-nowrap leading-7 pr-5"
+            className="w-[177px] relative whitespace-nowrap leading-7"
             style={{
               display: "flex",
               alignItems: "center",
@@ -226,7 +229,7 @@ const Header = () => {
             </NavLink>
           </li>
           <li
-            className="w-28 relative whitespace-nowrap leading-7 pr-5"
+            className="w-auto relative whitespace-nowrap leading-7 pr-5"
             style={{
               display: "flex",
               alignItems: "center",
@@ -260,28 +263,45 @@ const Header = () => {
             </NavLink>
           </li>
         </ul>
+        <div>
+          <Button className="bg-transparent! w-6! h-6! p-0!">
+            <svg
+              viewBox="0 0 23 5"
+              className="w-[18px] h-[18px]"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="2.5" cy="2.5" r="2.5" fill="white" />
+              <circle cx="11.5" cy="2.5" r="2.5" fill="white" />
+              <circle cx="20.5" cy="2.5" r="2.5" fill="white" />
+            </svg>
+          </Button>
+        </div>
       </div>
-      <div style={{ width: "50px", height: "50px", padding: 15 }}>
-        <svg
-          style={{ width: 20, height: 20 }}
-          viewBox="0 0 34 31"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M29.6201 4.6423C28.0671 2.93842 25.9362 2 23.6195 2C21.8878 2 20.3018 2.55384 18.9057 3.646C18.2012 4.19729 17.5628 4.87175 17 5.65898C16.4374 4.87199 15.7988 4.19729 15.0941 3.646C13.6982 2.55384 12.1122 2 10.3805 2C8.06377 2 5.93265 2.93842 4.37968 4.6423C2.84526 6.32627 2 8.62682 2 11.1205C2 13.6871 2.94551 16.0365 4.97546 18.5144C6.79141 20.7309 9.40135 22.981 12.4237 25.5864C13.4558 26.4762 14.6256 27.4848 15.8403 28.5592C16.1611 28.8435 16.5729 29 17 29C17.4269 29 17.8389 28.8435 18.1593 28.5596C19.374 27.4851 20.5445 26.476 21.577 25.5858C24.5989 22.9807 27.2088 20.7309 29.0248 18.5141C31.0547 16.0365 32 13.6871 32 11.1202C32 8.62682 31.1547 6.32627 29.6201 4.6423Z"
-            stroke="white"
-            stroke-width="3"
-          ></path>
-        </svg>
-      </div>
-      <div>
+
+      <div className="ml-39 flex items-center justify-center">
         <Button
-          style={{ width: "50px", height: "50px", padding: 15 }}
           className="bg-transparent!"
+          style={{ width: "50px", height: "50px", padding: 12 }}
         >
           <svg
-            className="w-5 h-5 text-white"
+            style={{ width: 20, height: 20 }}
+            viewBox="0 0 34 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M29.6201 4.6423C28.0671 2.93842 25.9362 2 23.6195 2C21.8878 2 20.3018 2.55384 18.9057 3.646C18.2012 4.19729 17.5628 4.87175 17 5.65898C16.4374 4.87199 15.7988 4.19729 15.0941 3.646C13.6982 2.55384 12.1122 2 10.3805 2C8.06377 2 5.93265 2.93842 4.37968 4.6423C2.84526 6.32627 2 8.62682 2 11.1205C2 13.6871 2.94551 16.0365 4.97546 18.5144C6.79141 20.7309 9.40135 22.981 12.4237 25.5864C13.4558 26.4762 14.6256 27.4848 15.8403 28.5592C16.1611 28.8435 16.5729 29 17 29C17.4269 29 17.8389 28.8435 18.1593 28.5596C19.374 27.4851 20.5445 26.476 21.577 25.5858C24.5989 22.9807 27.2088 20.7309 29.0248 18.5141C31.0547 16.0365 32 13.6871 32 11.1202C32 8.62682 31.1547 6.32627 29.6201 4.6423Z"
+              stroke="white"
+              stroke-width="3"
+            ></path>
+          </svg>
+        </Button>
+        <Button
+          style={{ width: "50px", height: "50px"}}
+          className="bg-transparent! p-0!"
+        >
+          <svg
+            className="w-5 h-5 text-white p-0"
             viewBox="0 0 19 19"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -300,6 +320,30 @@ const Header = () => {
               strokeLinecap="square"
             />
           </svg>
+        </Button>
+        <Button
+          style={{ width: 62, height: 62, padding: "0.75rem" }}
+          className="bg-transparent! ml-[0.2rem]! mr-[1.2rem]!"
+        >
+          <svg
+            className="w-full h-full text-white"
+            viewBox="0 0 21 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M7.4492 11.541H15.2656C16.0525 11.541 16.7397 11.1056 17.1016 10.4604L20.8525 3.65115C20.9364 3.50425 20.9836 3.33113 20.9836 3.14754C20.9836 2.56525 20.5115 2.09838 19.9345 2.09838H4.4223L3.42556 0H0V2.09838H2.09838L5.87016 10.0564L4.45377 12.6269C4.29113 12.9312 4.1967 13.2721 4.1967 13.6394C4.1967 14.7987 5.13575 15.7377 6.29508 15.7377H18.8852V13.6393H6.741C6.5941 13.6393 6.47872 13.5239 6.47872 13.377C6.47872 13.3298 6.4892 13.2879 6.5102 13.2511L7.4492 11.541ZM6.29508 16.7869C5.13575 16.7869 4.20723 17.7259 4.20723 18.8852C4.20723 20.0446 5.13575 20.9836 6.29508 20.9836C7.45441 20.9836 8.39346 20.0446 8.39346 18.8852C8.39346 17.7259 7.45441 16.7869 6.29508 16.7869ZM14.699 18.8852C14.699 17.7259 15.6275 16.7869 16.7869 16.7869C17.9462 16.7869 18.8852 17.7259 18.8852 18.8852C18.8852 20.0446 17.9462 20.9836 16.7869 20.9836C15.6275 20.9836 14.699 20.0446 14.699 18.8852Z"
+              fill="white"
+            ></path>
+          </svg>
+          <span className="w-5 ml-[4px] right-\[-13px]\ text-left font-bold text-sm">
+            0
+          </span>
+        </Button>
+        <Button className="bg-[#fd0]! w-[50px]! h-[50px]! rounded-4xl! p-3! flex items-center justify-center">
+          <img className="w-5 h-[23px]" src={User} alt="user" />
         </Button>
       </div>
     </div>
