@@ -2,10 +2,12 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import Translate from "../translate/Translate";
 import { NavLink } from "react-router-dom";
-import { Button } from "@mantine/core";
+import { Button, Modal } from "@mantine/core";
+import HeaderVM from "./HeaderVM";
 import User from "@/assets/image.png";
 import "@/index.css";
 const Header = () => {
+  const { opened, close } = HeaderVM();
   const { t } = useTranslation();
   return (
     <div
@@ -297,7 +299,7 @@ const Header = () => {
           </svg>
         </Button>
         <Button
-          style={{ width: "50px", height: "50px"}}
+          style={{ width: "50px", height: "50px" }}
           className="bg-transparent! p-0!"
         >
           <svg
@@ -338,14 +340,33 @@ const Header = () => {
               fill="white"
             ></path>
           </svg>
-          <span className="w-5 ml-[4px] right-\[-13px]\ text-left font-bold text-sm">
+          <span className="w-5 ml-1 right-\[-13px]\ text-left font-bold text-sm">
             0
           </span>
         </Button>
-        <Button className="bg-[#fd0]! w-[50px]! h-[50px]! rounded-4xl! p-3! flex items-center justify-center">
+        <Button
+          onClick={close}
+          className="bg-[#fd0]! w-[50px]! h-[50px]! rounded-4xl! p-3! flex items-center justify-center"
+        >
           <img className="w-5 h-[23px]" src={User} alt="user" />
         </Button>
       </div>
+      <Modal className="p-0 m-0 rounded-[0.75rem]" radius={"0.75rem"} size={440} opened={opened} onClose={close} withCloseButton={false}>
+        <div>
+        <div className="absolute left-[-98px] top-[88px] w-full h-[154px] bg-[#ffdd00] bg-opacity-100 rotate-[-40deg] origin-top-left"></div>
+        <h4 className="fixed text-[1.875rem] leading-[2.25px] font-bold">{t("header.Login")}</h4>
+      <p> adasd</p>
+      <p> adasd</p>
+      <p> adasd</p>
+      <p> adasd</p>
+      <p> adasd</p>
+      <p> adasd</p>
+      <p> adasd</p>
+      <p> adasd</p>
+      <p> adasd</p>
+      <p> adasd</p>
+      </div>
+      </Modal>
     </div>
   );
 };
