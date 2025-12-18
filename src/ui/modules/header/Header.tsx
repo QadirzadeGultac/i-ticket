@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import Translate from "../translate/Translate";
 import { NavLink } from "react-router-dom";
-import { Button, Modal } from "@mantine/core";
+import { Button, Modal, Input } from "@mantine/core";
 import HeaderVM from "./HeaderVM";
 import User from "@/assets/image.png";
 import "@/index.css";
@@ -12,9 +12,9 @@ const Header = () => {
   return (
     <div
       // style={{ width: 200, height: 36, paddingTop: 44, paddingLeft: 38 }}
-      className="w-[1432px] h-[124px] flex items-center justify-start mx-auto px-14 py-8 ml-[220px] mr-[220px]"
+      className="w-[1432px] h-[124px] flex items-center justify-start mx-auto px-14 py-8 ml-[220px] mr-[220px] font-family: 'SF Pro Display',"
     >
-      <div className="ml-[17px] mr-[20px]">
+      <div className="ml-[17px] mr-5">
         <svg
           className="w-40 h-9"
           // width={160}
@@ -351,21 +351,60 @@ const Header = () => {
           <img className="w-5 h-[23px]" src={User} alt="user" />
         </Button>
       </div>
-      <Modal className="p-0 m-0 rounded-[0.75rem]" radius={"0.75rem"} size={440} opened={opened} onClose={close} withCloseButton={false}>
-        <div>
-        <div className="absolute left-[-98px] top-[88px] w-full h-[154px] bg-[#ffdd00] bg-opacity-100 rotate-[-40deg] origin-top-left"></div>
-        <h4 className="fixed text-[1.875rem] leading-[2.25px] font-bold">{t("header.Login")}</h4>
-      <p> adasd</p>
-      <p> adasd</p>
-      <p> adasd</p>
-      <p> adasd</p>
-      <p> adasd</p>
-      <p> adasd</p>
-      <p> adasd</p>
-      <p> adasd</p>
-      <p> adasd</p>
-      <p> adasd</p>
-      </div>
+      <Modal
+        className="rounded-[0.75rem]! flex justify-center font-sans"
+        classNames={{content:"mt-[209px]"}}
+        radius={"0.75rem"}
+        // centered
+        size={440}
+        opened={opened}
+        onClose={close}
+        withCloseButton={false}
+      >
+        <div className="m-5 w-[368px] h-[322px]">
+          <div className="absolute left-[-98px] top-[88px] w-full h-[154px] bg-[#ffdd00] bg-opacity-100 rotate-[-40deg] origin-top-left -z-1"></div>
+          <div>
+            <div className="w-full h-full">
+              <h4 className="text-[1.875rem] leading-9 font-family: 'SF Pro Display' font-bold mb-6">
+                {t("header.Login")}
+              </h4>
+            </div>
+            <form action="">
+              <Input
+                placeholder="Email"
+                classNames={{
+                  input: `
+      w-full!
+      h-full!
+      rounded-lg!
+      border border-gray-300!
+      px-6! py-4!
+      mb-6!
+      text-sm! font-medium! leading-5!
+      lg:text-xl! lg:leading-7!
+    `,
+                }}
+              />
+
+              <Input
+                placeholder="Password"
+                classNames={{
+                  input: `
+      w-full!
+      h-full!
+      rounded-lg!
+      border border-gray-300!
+      mb-6!
+      px-6! py-4!
+      text-sm! font-medium! leading-5!
+      lg:text-xl! lg:leading-7!
+    `,
+                }}
+              />
+              <Button></Button>
+            </form>
+          </div>
+        </div>
       </Modal>
     </div>
   );
