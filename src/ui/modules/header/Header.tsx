@@ -11,14 +11,21 @@ const Header = () => {
   const { t } = useTranslation();
   return (
     <div
-      // style={{ width: 200, height: 36, paddingTop: 44, paddingLeft: 38 }}
-      className="w-[1432px] h-[124px] flex items-center justify-start mx-auto px-14 py-8 ml-[220px] mr-[220px] font-family: 'SF Pro Display',"
+      className="
+    w-full max-w-[1432px]
+    min-h-[124px]
+    flex items-center justify-start
+    mx-auto
+    px-4 sm:px-6 md:px-10 lg:px-14
+    py-4 sm:py-6 md:py-8
+    font-['SF_Pro_Display']
+    mx-4 sm:mx-8 md:mx-20 lg:mx-[220px]
+
+  "
     >
-      <div className="ml-[17px] mr-5">
+      <div className="ml-2 sm:ml-[17px] mr-2 sm:mr-5">
         <svg
-          className="w-40 h-9"
-          // width={160}
-          height={36}
+          className="w-32 sm:w-36 md:w-40 h-8 sm:h-9"
           viewBox="0 0 160 43"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -59,217 +66,227 @@ const Header = () => {
         </svg>
       </div>
 
-      <div className="flex align-center w-[850px]">
+      <div className="flex items-center w-full max-w-[850px] mx-auto">
         <div>
           <Translate />
         </div>
-        <ul className="flex text-white align-center list-none size-1.25rem pr-1.25rem font-bold!">
+        <ul className="flex items-center text-white list-none text-[16px] sm:text-[18px] md:text-[20px] pr-4 sm:pr-5 md:pr-[20px] font-bold">
           <li
-            className="w-auto relative whitespace-nowrap leading-7 pr-5"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              fontFamily: "SF Pro Display",
-              fontSize: "1.25rem",
-              fontWeight: "700",
-            }}
+            className="
+  w-auto
+  relative
+  whitespace-nowrap
+  flex items-center
+  font-['SF_Pro_Display']
+  font-bold
+  text-[20px]
+  leading-6 sm:leading-7
+  pr-4 sm:pr-5
+"
           >
             <NavLink
               to="/events"
               className={({ isActive }) => `
-    relative
-    before:content-['']
-    before:absolute
-    before:left-0
-    before:bottom-[-9px]
-    before:right-5
-    before:h-[9px]
-    before:opacity-0
-    before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
-    before:bg-no-repeat
-    before:bg-center
-    before:bg-size-[100px]
-    before:transition-opacity
-    before:duration-300
-    hover:before:opacity-100
-    ${isActive ? "before:opacity-100" : ""}
-  `}
+  relative flex items-center
+  before:content-['']
+  before:absolute
+  before:left-0
+  before:bottom-0
+  before:right-5
+  before:h-[9px] sm:before:h-[10px]
+  before:opacity-0
+  before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
+  before:bg-no-repeat
+  before:bg-center
+  before:bg-size-[100px]
+  before:transition-opacity
+  before:duration-300
+  hover:before:opacity-100
+  ${isActive ? "before:opacity-100" : ""}
+`}
             >
               {t("header.All_events")}
             </NavLink>
           </li>
           <li
-            className="w-auto relative whitespace-nowrap leading-7 pr-5"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              fontFamily: "SF Pro Display",
-              fontSize: "1.25rem",
-              fontWeight: "700",
-            }}
+            className="
+  w-auto
+  relative
+  whitespace-nowrap
+  flex items-center
+  font-['SF_Pro_Display']
+  font-bold
+  text-[20px]
+  leading-6 sm:leading-7
+  pr-4 sm:pr-5
+"
           >
             <NavLink
               to="/concerts"
-              className="relative
-    before:content-['']
-    before:absolute
-    before:left-0
-    before:bottom-[-9px]
-    before:right-5
-    before:h-[9px]
-    before:opacity-0
-    before:bg-no-repeat
-    before:bg-center
-    before:bg-size-[100px]
-    before:transition-opacity
-    before:duration-300
-    hover:before:opacity-100"
+              className={({ isActive }) => `
+  relative flex items-center
+  before:content-['']
+  before:absolute
+  before:left-0
+  before:bottom-0
+  before:right-5
+  before:h-[9px] sm:before:h-[10px]
+  before:opacity-0
+  before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
+  before:bg-no-repeat
+  before:bg-center
+  before:bg-size-[100px]
+  before:transition-opacity
+  before:duration-300
+  hover:before:opacity-100
+  ${isActive ? "before:opacity-100" : ""}
+`}
             >
               {t("header.Concert")}
             </NavLink>
           </li>
           <li
-            className="w-auto relative whitespace-nowrap leading-7 pr-5"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              fontFamily: "SF Pro Display",
-              fontSize: "1.25rem",
-              fontWeight: "700",
-            }}
+            className="
+  w-auto
+  relative
+  whitespace-nowrap
+  flex items-center
+  font-['SF_Pro_Display']
+  font-bold
+  text-[20px]
+  leading-6 sm:leading-7
+  pr-4 sm:pr-5
+"
           >
             <NavLink
               to="/theatre"
               className={({ isActive }) => `
-    relative
-    before:content-['']
-    before:absolute
-    before:left-0
-    before:bottom-[-9px]
-    before:right-5
-    before:h-[9px]
-    before:opacity-0
-    before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
-    before:bg-no-repeat
-    before:bg-center
-    before:bg-size-[100px]
-    before:transition-opacity
-    before:duration-300
-    hover:before:opacity-100
-    ${isActive ? "before:opacity-100" : ""}
-  `}
+  relative flex items-center
+  before:content-['']
+  before:absolute
+  before:left-0
+  before:bottom-0
+  before:right-5
+  before:h-[9px] sm:before:h-[10px]
+  before:opacity-0
+  before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
+  before:bg-no-repeat
+  before:bg-center
+  before:bg-size-[100px]
+  before:transition-opacity
+  before:duration-300
+  hover:before:opacity-100
+  ${isActive ? "before:opacity-100" : ""}
+`}
             >
               {t("header.Theatre")}
             </NavLink>
           </li>
           <li
-            className="w-auto relative whitespace-nowrap leading-7 pr-5"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              fontFamily: "SF Pro Display",
-              fontSize: "1.25rem",
-              fontWeight: "700",
-            }}
+            className="
+  w-auto
+  relative
+  whitespace-nowrap
+  flex items-center
+  font-['SF_Pro_Display']
+  font-bold
+  text-[20px]
+  leading-6 sm:leading-7
+  pr-4 sm:pr-5
+"
           >
             <NavLink
               to="/kids"
               className={({ isActive }) => `
-    relative
-    before:content-['']
-    before:absolute
-    before:left-0
-    before:bottom-[-9px]
-    before:right-5
-    before:h-[9px]
-    before:opacity-0
-    before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
-    before:bg-no-repeat
-    before:bg-center
-    before:bg-size-[100px]
-    before:transition-opacity
-    before:duration-300
-    hover:before:opacity-100
-    ${isActive ? "before:opacity-100" : ""}
-  `}
+  relative flex items-center
+  before:content-['']
+  before:absolute
+  before:left-0
+  before:bottom-0
+  before:right-5
+  before:h-[9px] sm:before:h-[10px]
+  before:opacity-0
+  before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
+  before:bg-no-repeat
+  before:bg-center
+  before:bg-size-[100px]
+  before:transition-opacity
+  before:duration-300
+  hover:before:opacity-100
+  ${isActive ? "before:opacity-100" : ""}
+`}
             >
               {t("header.Kids")}
             </NavLink>
           </li>
-          <li
-            className="w-[177px] relative whitespace-nowrap leading-7"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              fontFamily: "SF Pro Display",
-              fontSize: "1.25rem",
-              fontWeight: "700",
-            }}
-          >
+          <li className="w-[177px] relative whitespace-nowrap leading-7 flex items-center font-['SF_Pro_Display'] text-[20px] font-bold">
             <NavLink
               to="/dream-fest-2026"
               className={({ isActive }) => `
-    relative
-    before:content-['']
-    before:absolute
-    before:left-0
-    before:bottom-[-9px]
-    before:right-5
-    before:h-[9px]
-    before:opacity-0
-    before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
-    before:bg-no-repeat
-    before:bg-center
-    before:bg-size-[100px]
-    before:transition-opacity
-    before:duration-300
-    hover:before:opacity-100
-    ${isActive ? "before:opacity-100" : ""}
-  `}
+  relative flex items-center
+  before:content-['']
+  before:absolute
+  before:left-0
+  before:bottom-0
+  before:right-5
+  before:h-[9px] sm:before:h-[10px]
+  before:opacity-0
+  before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
+  before:bg-no-repeat
+  before:bg-center
+  before:bg-size-[100px]
+  before:transition-opacity
+  before:duration-300
+  hover:before:opacity-100
+  ${isActive ? "before:opacity-100" : ""}
+`}
             >
               {t("header.Dream_Fest_2026")}
             </NavLink>
           </li>
           <li
-            className="w-auto relative whitespace-nowrap leading-7 pr-5"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              fontFamily: "SF Pro Display",
-              fontSize: "1.25rem",
-              fontWeight: "700",
-            }}
+            className="
+  w-auto
+  relative
+  whitespace-nowrap
+  flex items-center
+  font-['SF_Pro_Display']
+  font-bold
+  text-[20px]
+  leading-6 sm:leading-7
+  pr-4 sm:pr-5
+"
           >
             <NavLink
               to="/sport"
               className={({ isActive }) => `
-    relative
-    before:content-['']
-    before:absolute
-    before:left-0
-    before:bottom-[-9px]
-    before:right-5
-    before:h-[9px]
-    before:opacity-0
-    before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
-    before:bg-no-repeat
-    before:bg-center
-    before:bg-size-[100px]
-    before:transition-opacity
-    before:duration-300
-    hover:before:opacity-100
-    ${isActive ? "before:opacity-100" : ""}
-  `}
+  relative flex items-center
+  before:content-['']
+  before:absolute
+  before:left-0
+  before:bottom-0
+  before:right-5
+  before:h-[9px] sm:before:h-[10px]
+  before:opacity-0
+  before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
+  before:bg-no-repeat
+  before:bg-center
+  before:bg-size-[100px]
+  before:transition-opacity
+  before:duration-300
+  hover:before:opacity-100
+  ${isActive ? "before:opacity-100" : ""}
+`}
             >
               {t("header.Sport")}
             </NavLink>
           </li>
         </ul>
         <div>
-          <Button className="bg-transparent! w-6! h-6! p-0!">
+          <Button className="bg-transparent! w-4! sm:w-5! md:w-6! h-4! sm:h-5! md:h-6! p-0!">
             <svg
               viewBox="0 0 23 5"
-              className="w-[18px] h-[18px]"
+              className="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5"
               xmlns="http://www.w3.org/2000/svg"
             >
               <circle cx="2.5" cy="2.5" r="2.5" fill="white" />
@@ -280,13 +297,10 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="ml-39 flex items-center justify-center">
-        <Button
-          className="bg-transparent!"
-          style={{ width: "50px", height: "50px", padding: 12 }}
-        >
+      <div className="ml-4 sm:ml-8 md:ml-[156px] flex items-center justify-center">
+        <Button className="bg-transparent! w-10! h-10! sm:w-[50px]! sm:h-[50px]! p-2! sm:p-3!">
           <svg
-            style={{ width: 20, height: 20 }}
+            className="w-4 h-4 sm:w-5 sm:h-5"
             viewBox="0 0 34 31"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -298,12 +312,9 @@ const Header = () => {
             ></path>
           </svg>
         </Button>
-        <Button
-          style={{ width: "50px", height: "50px" }}
-          className="bg-transparent! p-0!"
-        >
+        <Button className="w-10! h-10! sm:w-[50px]! sm:h-[50px]! bg-transparent! p-0!">
           <svg
-            className="w-5 h-5 text-white p-0"
+            className="w-4 h-4 sm:w-5 sm:h-5 text-white p-0"
             viewBox="0 0 19 19"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -323,10 +334,7 @@ const Header = () => {
             />
           </svg>
         </Button>
-        <Button
-          style={{ width: 62, height: 62, padding: "0.75rem" }}
-          className="bg-transparent! ml-[0.2rem]! mr-[1.2rem]!"
-        >
+        <Button className="w-[50px]! sm:w-[62px]! h-[50px]! sm:h-[62px]! p-2! sm:p-3! bg-transparent! ml-1! sm:ml-[0.2rem]! mr-3! sm:mr-[1.2rem]!">
           <svg
             className="w-full h-full text-white"
             viewBox="0 0 21 21"
@@ -340,20 +348,20 @@ const Header = () => {
               fill="white"
             ></path>
           </svg>
-          <span className="w-5 ml-1 right-\[-13px]\ text-left font-bold text-sm">
+          <span className="w-4 sm:w-5 ml-1 sm:ml-2 right-[-13px] text-left font-bold text-sm sm:text-base">
             0
           </span>
         </Button>
         <Button
           onClick={close}
-          className="bg-[#fd0]! w-[50px]! h-[50px]! rounded-4xl! p-3! flex items-center justify-center"
+          className="bg-[#fd0]! w-10! h-10! sm:w-[50px]! sm:h-[50px]! rounded-4xl! p-2! sm:p-3! flex! items-center! justify-center!"
         >
-          <img className="w-5 h-[23px]" src={User} alt="user" />
+          <img className="w-5 h-[23px] sm:h-[24px]" src={User} alt="user" />
         </Button>
       </div>
       <Modal
-        className="rounded-[0.75rem]! flex justify-center font-sans"
-        classNames={{content:"mt-[209px]"}}
+        className="rounded-[0.5rem] sm:rounded-[0.75rem] flex justify-center font-sans"
+        classNames={{ content: "mt-40 sm:mt-52 md:mt-[209px]" }}
         radius={"0.75rem"}
         // centered
         size={440}
@@ -361,11 +369,23 @@ const Header = () => {
         onClose={close}
         withCloseButton={false}
       >
-        <div className="m-5 w-[368px] h-[322px]">
-          <div className="absolute left-[-98px] top-[88px] w-full h-[154px] bg-[#ffdd00] bg-opacity-100 rotate-[-40deg] origin-top-left -z-1"></div>
+        <div className="m-2 sm:m-5 w-[280px] sm:w-[368px] h-[250px] sm:h-[322px]">
+          <div
+            className="
+              absolute
+              left-[-60px] sm:left-[-98px]
+              top-[60px] sm:top-[88px]
+              w-full
+              h-[120px] sm:h-[154px]
+              bg-[#ffdd00] bg-opacity-100
+              rotate-[-40deg]
+              origin-top-left
+              -z-1
+            "
+          ></div>
           <div>
             <div className="w-full h-full">
-              <h4 className="text-[1.875rem] leading-9 font-family: 'SF Pro Display' font-bold mb-6">
+              <h4 className="text-xl sm:text-2xl md:text-[1.875rem] leading-7 sm:leading-8 md:leading-9 font-['SF_Pro_Display'] font-bold mb-4 sm:mb-5 md:mb-6">
                 {t("header.Login")}
               </h4>
             </div>
@@ -374,15 +394,16 @@ const Header = () => {
                 placeholder="Email"
                 classNames={{
                   input: `
-      w-full!
-      h-full!
-      rounded-lg!
-      border border-gray-300!
-      px-6! py-4!
-      mb-6!
-      text-sm! font-medium! leading-5!
-      lg:text-xl! lg:leading-7!
-    `,
+                 w-full!
+                 h-full!
+                 rounded-lg!
+                 border! border-gray-300!
+                 px-6! py-4!
+                 mb-6!
+                 text-sm! font-medium! leading-5!
+                 lg:text-xl! lg:leading-7!
+                 font-['SF_Pro_Display']!
+              `,
                 }}
               />
 
@@ -390,19 +411,40 @@ const Header = () => {
                 placeholder="Password"
                 classNames={{
                   input: `
-      w-full!
-      h-full!
-      rounded-lg!
-      border border-gray-300!
-      mb-6!
-      px-6! py-4!
-      text-sm! font-medium! leading-5!
-      lg:text-xl! lg:leading-7!
-    `,
+                 w-full!
+                 h-full!
+                 rounded-lg!
+                 border! border-gray-300!
+                 px-6! py-4!
+                 mb-6!
+                 text-sm! font-medium leading-5!
+                 lg:text-xl! lg:leading-7!
+                 font-['SF_Pro_Display']!
+               `,
                 }}
               />
-              <Button></Button>
+              <Button
+                className="
+                 flex! items-center! justify-center!
+                 bg-[#fd0]! text-black!
+                 rounded-lg!
+                 px-6! sm:px-8! py-3! sm:py-4!
+                 text-lg! sm:text-[1.25rem]!
+                 w-full!
+                 h-[50px]! sm:h-[60px]!
+                 font-bold!
+                 font-['SF_Pro_Display']!
+               ">
+                {t("header.Log_in")}
+              </Button>
             </form>
+            <div className="modal-footer
+  text-gray-600
+  text-sm sm:text-base lg:text-[1.25rem]
+  font-medium
+  leading-5 sm:leading-6 lg:leading-7
+  text-center
+">{t("header.New_User")} <NavLink className="text-[#bb7dfb]" to='/new-user'>{t("header.Sign_Up")}</NavLink></div>
           </div>
         </div>
       </Modal>
