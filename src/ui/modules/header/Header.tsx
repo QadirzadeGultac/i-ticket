@@ -398,7 +398,7 @@ const Header = () => {
                  h-full!
                  rounded-lg!
                  border! border-gray-300!
-                 px-6! py-4!
+                 px-6! py-5!
                  mb-6!
                  text-sm! font-medium! leading-5!
                  lg:text-xl! lg:leading-7!
@@ -407,22 +407,19 @@ const Header = () => {
                 }}
               />
 
-              <Input
-                placeholder="Password"
-                classNames={{
-                  input: `
-                 w-full!
-                 h-full!
-                 rounded-lg!
-                 border! border-gray-300!
-                 px-6! py-4!
-                 mb-6!
-                 text-sm! font-medium leading-5!
-                 lg:text-xl! lg:leading-7!
-                 font-['SF_Pro_Display']!
-               `,
-                }}
-              />
+              <div className="flex border border-gray-300 py-3 px-5 jsutify-between rounded-lg items-center w-full mb-4">
+                <Input
+                  placeholder="Password"
+                  classNames={{
+                    input:
+                      "border-none! h-full! w-full! p-0! text-sm! font-medium! leading-5! lg:text-xl! lg:leading-7! font-['SF_Pro_Display']!",
+                    wrapper: "w-full!",
+                  }}
+                />
+                <NavLink className="text-[#bb7dfb] font-medium! w-20" to="/">
+                  Forgot?
+                </NavLink>
+              </div>
               <Button
                 className="
                  flex! items-center! justify-center!
@@ -434,17 +431,20 @@ const Header = () => {
                  h-[50px]! sm:h-[60px]!
                  font-bold!
                  font-['SF_Pro_Display']!
-               ">
+               "
+              >
                 {t("header.Log_in")}
               </Button>
             </form>
-            <div className="modal-footer
-  text-gray-600
-  text-sm sm:text-base lg:text-[1.25rem]
-  font-medium
-  leading-5 sm:leading-6 lg:leading-7
-  text-center
-">{t("header.New_User")} <NavLink className="text-[#bb7dfb]" to='/new-user'>{t("header.Sign_Up")}</NavLink></div>
+            <div
+              className="w-full modal-footer text-center sm:mt-5 font-medium leading-5 text-xl text-[#646464]
+"
+            >
+              {t("header.New_User")}{" "}
+              <NavLink className="text-[#bb7dfb]" to="/new-user">
+                {t("header.Sign_Up")}
+              </NavLink>
+            </div>
           </div>
         </div>
       </Modal>
