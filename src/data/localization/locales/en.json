@@ -10,6 +10,9 @@
     "Login": "Login",
     "Log_in": "Log in",
     "New_User": "New to iTicket.az?",
-    "Sign_Up": "Sign up now"
+    "Sign_Up": "Sign up now",
+    "Email": "Email",
+    "Password": "Password",
+    "Forgot": "Forgot?"
   }
 }

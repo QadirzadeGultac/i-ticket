@@ -12,15 +12,14 @@ const Header = () => {
   return (
     <div
       className="
-    w-full max-w-[1432px]
+    w-auto max-w-[1432px]
     min-h-[124px]
     flex items-center justify-start
     mx-auto
     px-4 sm:px-6 md:px-10 lg:px-14
     py-4 sm:py-6 md:py-8
     font-['SF_Pro_Display']
-    mx-4 sm:mx-8 md:mx-20 lg:mx-[220px]
-
+    sm:mx-8 md:mx-20 lg:mx-[220px]
   "
     >
       <div className="ml-2 sm:ml-[17px] mr-2 sm:mr-5">
@@ -70,7 +69,7 @@ const Header = () => {
         <div>
           <Translate />
         </div>
-        <ul className="flex items-center text-white list-none text-[16px] sm:text-[18px] md:text-[20px] pr-4 sm:pr-5 md:pr-[20px] font-bold">
+        <ul className="flex items-center text-white list-none text-[16px] sm:text-[18px] md:text-[20px] font-bold">
           <li
             className="
   w-auto
@@ -93,7 +92,7 @@ const Header = () => {
   before:left-0
   before:bottom-0
   before:right-5
-  before:h-[9px] sm:before:h-[10px]
+  before:h-[9px] sm:before:h-2.5
   before:opacity-0
   before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
   before:bg-no-repeat
@@ -130,7 +129,7 @@ const Header = () => {
   before:left-0
   before:bottom-0
   before:right-5
-  before:h-[9px] sm:before:h-[10px]
+  before:h-[9px] sm:before:h-2.5
   before:opacity-0
   before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
   before:bg-no-repeat
@@ -167,7 +166,7 @@ const Header = () => {
   before:left-0
   before:bottom-0
   before:right-5
-  before:h-[9px] sm:before:h-[10px]
+  before:h-[9px] sm:before:h-2.5
   before:opacity-0
   before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
   before:bg-no-repeat
@@ -204,7 +203,7 @@ const Header = () => {
   before:left-0
   before:bottom-0
   before:right-5
-  before:h-[9px] sm:before:h-[10px]
+  before:h-[9px] sm:before:h-2.5
   before:opacity-0
   before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
   before:bg-no-repeat
@@ -229,7 +228,7 @@ const Header = () => {
   before:left-0
   before:bottom-0
   before:right-5
-  before:h-[9px] sm:before:h-[10px]
+  before:h-[9px] sm:before:h-2.5
   before:opacity-0
   before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
   before:bg-no-repeat
@@ -266,7 +265,7 @@ const Header = () => {
   before:left-0
   before:bottom-0
   before:right-5
-  before:h-[9px] sm:before:h-[10px]
+  before:h-[9px] sm:before:h-2.5
   before:opacity-0
   before:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 88 9%27%3E%3Cpath fill=%27%23fd0%27 d=%27m0 5 88-5v4L0 9z%27/%3E%3C/svg%3E')]
   before:bg-no-repeat
@@ -356,7 +355,7 @@ const Header = () => {
           onClick={close}
           className="bg-[#fd0]! w-10! h-10! sm:w-[50px]! sm:h-[50px]! rounded-4xl! p-2! sm:p-3! flex! items-center! justify-center!"
         >
-          <img className="w-5 h-[23px] sm:h-[24px]" src={User} alt="user" />
+          <img className="w-5 h-[23px] sm:h-6" src={User} alt="user" />
         </Button>
       </div>
       <Modal
@@ -391,15 +390,15 @@ const Header = () => {
             </div>
             <form action="">
               <Input
-                placeholder="Email"
+                placeholder={t("header.Email")}
                 classNames={{
                   input: `
                  w-full!
                  h-full!
                  rounded-lg!
                  border! border-gray-300!
-                 px-6! py-5!
-                 mb-6!
+                 px-6! py-4.5!
+                 mb-5!
                  text-sm! font-medium! leading-5!
                  lg:text-xl! lg:leading-7!
                  font-['SF_Pro_Display']!
@@ -407,17 +406,20 @@ const Header = () => {
                 }}
               />
 
-              <div className="flex border border-gray-300 py-3 px-5 jsutify-between rounded-lg items-center w-full mb-4">
+              <div className="flex border border-gray-300 py-3 px-6 jsutify-between rounded-lg items-center w-full mb-5">
                 <Input
-                  placeholder="Password"
+                  placeholder={t("header.Password")}
                   classNames={{
                     input:
-                      "border-none! h-full! w-full! p-0! text-sm! font-medium! leading-5! lg:text-xl! lg:leading-7! font-['SF_Pro_Display']!",
+                      "border-none! h-full! w-auto! p-0! text-sm! font-medium! leading-5! lg:text-xl! lg:leading-7! font-['SF_Pro_Display']!",
                     wrapper: "w-full!",
                   }}
                 />
-                <NavLink className="text-[#bb7dfb] font-medium! w-20" to="/">
-                  Forgot?
+                <NavLink
+                  className="text-[#bb7dfb] font-medium! w-auto text-[1.2rem]"
+                  to="/"
+                >
+                  {t("header.Forgot")}
                 </NavLink>
               </div>
               <Button

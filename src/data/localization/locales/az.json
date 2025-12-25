@@ -3,13 +3,16 @@
   {
     "All_events": "Bütün tədbirlər",
     "Concert": "Konsert",
-    "Theatre": "Teatr",
+    "Theatre": "Tamaşa",
     "Kids": "Uşaqlar",
     "Dream_Fest_2026": "Dream Fest 2026",
     "Sport": "İdman",
     "Login": "Daxil ol",
     "Log_in": "daxil",
     "New_User": "iTicket.AZ-da yenisiniz?",
-    "Sign_Up": "Qeydiyyatdan keçin"
+    "Sign_Up": "Qeydiyyatdan keçin",
+    "Email": "E-poçt",
+    "Password": "Şifrə",
+    "Forgot": "Unutmusunuz?"
   }
 }
