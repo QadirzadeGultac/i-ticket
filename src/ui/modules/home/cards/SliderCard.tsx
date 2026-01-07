@@ -14,29 +14,30 @@ const SliderCard = () => {
       <div className="flex relative justify-center">
         <div
           style={{
-            width: "1800px",
+            width: "100%",
             height: 285,
             backgroundColor: "#fd0",
             transform: "translateY(-50%) rotate(-33deg)",
             position: "absolute",
-            top: "37.9%",
+            top: "30%",
             left: "-15%",
             zIndex: 0,
             filter: "drop-shadow(0 52px 94px rgba(0, 0, 0, .308949))",
           }}
+          className="max-[1024px]:hidden"
         ></div>
         <Card
-          className="position relative"
-          style={{
-            position: "relative",
-            paddingLeft: 15,
-            backgroundColor: "transparent",
-            borderBlockColor: "none",
-            paddingTop: 20,
-            width: 1430,
-            height: 920,
-            filter: "drop-shadow(0 52px 94px rgba(0, 0, 0, .308949))",
-          }}
+          // style={{
+          //   position: "relative",
+          //   paddingLeft: 15,
+          //   backgroundColor: "transparent",
+          //   borderBlockColor: "none",
+          //   paddingTop: 20,
+          //   height: 857,
+          //   // filter: "drop-shadow(0 52px 94px rgba(0, 0, 0, .308949))",
+          // }}
+          className="position relative pb-10! w-[90vw]! max-w-[1432px]! h-[857px] bg-transparent! border-0! pt-5!"
+
         >
           <Button
             variant="light"
@@ -48,7 +49,7 @@ const SliderCard = () => {
               borderTopLeftRadius: 9999,
               backgroundColor: "#fd0",
               position: "absolute",
-              top: "45.8%",
+              top: "49.2%",
               left: 15,
               transform: "translateY(-50%) rotate(180deg)",
               zIndex: 10,
@@ -74,7 +75,7 @@ const SliderCard = () => {
               textAlign: "start",
               backgroundColor: "#fd0",
               position: "absolute",
-              top: "45.8%",
+              top: "49.2%",
               right: 15,
               transform: "translateY(-50%)",
               zIndex: 10,

@@ -10,16 +10,17 @@ const Header = () => {
   const { opened, close } = HeaderVM();
   const { t } = useTranslation();
   return (
+    // <div>
     <div
       className="
     w-auto max-w-[1432px]
     min-h-[124px]
-    flex items-center justify-start
     mx-auto
+    flex items-center justify-between
     px-4 sm:px-6 md:px-10 lg:px-14
     py-4 sm:py-6 md:py-8
     font-['SF_Pro_Display']
-    sm:mx-8 md:mx-20 lg:mx-[220px]
+    sm:mx-8 md:mx-20 lg:mx-[13.75rem]
   "
     >
       <div className="ml-2 sm:ml-[17px] mr-2 sm:mr-5">
@@ -69,7 +70,12 @@ const Header = () => {
         <div>
           <Translate />
         </div>
-        <ul className="flex items-center text-white list-none text-[16px] sm:text-[18px] md:text-[20px] font-bold">
+        <ul
+          className="flex items-center text-white list-none text-[16px] sm:text-[18px] md:text-[20px]
+        
+        
+        font-bold"
+        >
           <li
             className="
   w-auto
@@ -450,6 +456,10 @@ const Header = () => {
           </div>
         </div>
       </Modal>
+    {/* </div> */}
+      {/* <div className="w-[50px] h-[50px]">
+        <svg className="w-5 h-3.5" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="21" height="2" rx="1" fill="#BEBEBE"></rect> <rect y="6" width="21" height="2" rx="1" fill="#BEBEBE"></rect> <rect y="6" width="21" height="2" rx="1" fill="#BEBEBE"></rect> <rect y="12" width="21" height="2" rx="1" fill="#BEBEBE"></rect></svg>
+      </div> */}
     </div>
   );
 };
