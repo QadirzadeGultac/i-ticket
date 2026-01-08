@@ -13,16 +13,24 @@ const Header = () => {
     // <div>
     <div
       className="
-    w-auto max-w-[1432px]
-    min-h-[124px]
-    mx-auto
-    flex items-center justify-between
-    px-4 sm:px-6 md:px-10 lg:px-14
-    py-4 sm:py-6 md:py-8
-    font-['SF_Pro_Display']
-    sm:mx-8 md:mx-20 lg:mx-[13.75rem]
+    max-[1255px]:p-4
+
+    w-screen
   "
     >
+      <div className="
+    flex items-center justify-center
+    mx-70
+    px-4
+    py-4
+    font-['SF_Pro_Display']
+    max-[1500px]:mx-0
+    max-[1255px]:bg-white
+    max-[1255px]:h-[50px]
+    max-[1255px]:justify-between">
+      <div className="w-[50px] h-[50px] min-[1255px]:hidden flex items-center justify-center">
+        <svg className="w-5 h-3.5" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="21" height="2" rx="1" fill="#BEBEBE"></rect> <rect y="6" width="21" height="2" rx="1" fill="#BEBEBE"></rect> <rect y="6" width="21" height="2" rx="1" fill="#BEBEBE"></rect> <rect y="12" width="21" height="2" rx="1" fill="#BEBEBE"></rect></svg>
+      </div>
       <div className="ml-2 sm:ml-[17px] mr-2 sm:mr-5">
         <svg
           className="w-32 sm:w-36 md:w-40 h-8 sm:h-9"
@@ -46,7 +54,7 @@ const Header = () => {
             d="M13.5391 10.6494C12.1313 10.6494 10.9897 11.7947 10.9897 13.1988C10.9897 14.6061 12.1313 15.7474 13.5391 15.7474C14.9468 15.7474 16.0885 14.6061 16.0885 13.1988C16.0885 11.7947 14.9468 10.6494 13.5391 10.6494Z"
             fill="#828283"
           ></path>{" "}
-          <g className="text-color" fill="white">
+          <g className="text-color max-[1255px]:fill-black" fill="white">
             <path d="M38.7801 29.0307C38.2507 28.7414 37.9874 28.0471 37.9874 26.9585V20.1295H42.3205V17.1005H37.9874V13.1699L34.196 14.4087V17.1005H31.4099V20.1295H34.196V26.7222C34.196 30.1005 35.9303 31.5536 36.9625 32.116C37.845 32.6009 38.7947 32.796 39.7299 32.796C41.3858 32.796 43.0037 32.1805 44.1454 31.4524L42.1813 28.6209C41.0552 29.3422 39.5458 29.4507 38.7801 29.0307Z" />
             <path d="M48.6942 10.6494C47.2864 10.6494 46.1444 11.7947 46.1444 13.1988C46.1444 14.6061 47.2864 15.7474 48.6942 15.7474C50.102 15.7474 51.2436 14.6061 51.2436 13.1988C51.2436 11.7947 50.102 10.6494 48.6942 10.6494Z" />
             <path d="M46.7986 32.3849H50.5867V17.1028L46.7986 18.3792V32.3849Z" />
@@ -66,15 +74,12 @@ const Header = () => {
         </svg>
       </div>
 
-      <div className="flex items-center w-full max-w-[850px] mx-auto">
+      <div className="flex items-center w-full max-w-[800px] mx-auto max-[1256px]:hidden">
         <div>
           <Translate />
         </div>
         <ul
-          className="flex items-center text-white list-none text-[16px] sm:text-[18px] md:text-[20px]
-        
-        
-        font-bold"
+          className="flex items-center text-white list-none text-[16px] sm:text-[18px] md:text-[20px] font-bold"
         >
           <li
             className="
@@ -265,6 +270,7 @@ const Header = () => {
             <NavLink
               to="/sport"
               className={({ isActive }) => `
+              max-[1330px]:hidden
   relative flex items-center
   before:content-['']
   before:absolute
@@ -302,7 +308,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="ml-4 sm:ml-8 md:ml-[156px] flex items-center justify-center">
+      <div className="flex items-center justify-center">
         <Button className="bg-transparent! w-10! h-10! sm:w-[50px]! sm:h-[50px]! p-2! sm:p-3!">
           <svg
             className="w-4 h-4 sm:w-5 sm:h-5"
@@ -313,11 +319,12 @@ const Header = () => {
             <path
               d="M29.6201 4.6423C28.0671 2.93842 25.9362 2 23.6195 2C21.8878 2 20.3018 2.55384 18.9057 3.646C18.2012 4.19729 17.5628 4.87175 17 5.65898C16.4374 4.87199 15.7988 4.19729 15.0941 3.646C13.6982 2.55384 12.1122 2 10.3805 2C8.06377 2 5.93265 2.93842 4.37968 4.6423C2.84526 6.32627 2 8.62682 2 11.1205C2 13.6871 2.94551 16.0365 4.97546 18.5144C6.79141 20.7309 9.40135 22.981 12.4237 25.5864C13.4558 26.4762 14.6256 27.4848 15.8403 28.5592C16.1611 28.8435 16.5729 29 17 29C17.4269 29 17.8389 28.8435 18.1593 28.5596C19.374 27.4851 20.5445 26.476 21.577 25.5858C24.5989 22.9807 27.2088 20.7309 29.0248 18.5141C31.0547 16.0365 32 13.6871 32 11.1202C32 8.62682 31.1547 6.32627 29.6201 4.6423Z"
               stroke="white"
+              className="max-[1255px]:stroke-[#d9d9d9]"
               stroke-width="3"
             ></path>
           </svg>
         </Button>
-        <Button className="w-10! h-10! sm:w-[50px]! sm:h-[50px]! bg-transparent! p-0!">
+        <Button className="w-10! h-10! sm:w-[50px]! sm:h-[50px]! bg-transparent! p-0! max-[1255px]:hidden!">
           <svg
             className="w-4 h-4 sm:w-5 sm:h-5 text-white p-0"
             viewBox="0 0 19 19"
@@ -325,6 +332,8 @@ const Header = () => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <circle
+            // className="max-[1255px]:stroke-[#d9d9d9]"
+
               cx="7.5"
               cy="7.5"
               r="6.5"
@@ -332,6 +341,7 @@ const Header = () => {
               strokeWidth="2"
             />
             <path
+            // className="max-[1255px]:stroke-[#d9d9d9]"
               d="M13 13L17 17"
               stroke="currentColor"
               strokeWidth="2"
@@ -339,34 +349,35 @@ const Header = () => {
             />
           </svg>
         </Button>
-        <Button className="w-[50px]! sm:w-[62px]! h-[50px]! sm:h-[62px]! p-2! sm:p-3! bg-transparent! ml-1! sm:ml-[0.2rem]! mr-3! sm:mr-[1.2rem]!">
+        <Button className="w-[50px]! h-[50px]! p-2! sm:p-3! bg-transparent! ml-1! sm:ml-[0.2rem]! mr-3! sm:mr-[1.2rem]!">
           <svg
-            className="w-full h-full text-white"
+            className="w-full h-full text-white max-[1255px]:stroke-[#d9d9d9]"
             viewBox="0 0 21 21"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
+              className="max-[1255px]:stroke-[#d9d9d9] max-[1255px]:fill-[#d9d9d9]"
               fill-rule="evenodd"
               clip-rule="evenodd"
               d="M7.4492 11.541H15.2656C16.0525 11.541 16.7397 11.1056 17.1016 10.4604L20.8525 3.65115C20.9364 3.50425 20.9836 3.33113 20.9836 3.14754C20.9836 2.56525 20.5115 2.09838 19.9345 2.09838H4.4223L3.42556 0H0V2.09838H2.09838L5.87016 10.0564L4.45377 12.6269C4.29113 12.9312 4.1967 13.2721 4.1967 13.6394C4.1967 14.7987 5.13575 15.7377 6.29508 15.7377H18.8852V13.6393H6.741C6.5941 13.6393 6.47872 13.5239 6.47872 13.377C6.47872 13.3298 6.4892 13.2879 6.5102 13.2511L7.4492 11.541ZM6.29508 16.7869C5.13575 16.7869 4.20723 17.7259 4.20723 18.8852C4.20723 20.0446 5.13575 20.9836 6.29508 20.9836C7.45441 20.9836 8.39346 20.0446 8.39346 18.8852C8.39346 17.7259 7.45441 16.7869 6.29508 16.7869ZM14.699 18.8852C14.699 17.7259 15.6275 16.7869 16.7869 16.7869C17.9462 16.7869 18.8852 17.7259 18.8852 18.8852C18.8852 20.0446 17.9462 20.9836 16.7869 20.9836C15.6275 20.9836 14.699 20.0446 14.699 18.8852Z"
               fill="white"
             ></path>
           </svg>
-          <span className="w-4 sm:w-5 ml-1 sm:ml-2 right-[-13px] text-left font-bold text-sm sm:text-base">
+          <span className="w-4 ml-1right-[-13px] text-left font-bold text-sm">
             0
           </span>
         </Button>
         <Button
           onClick={close}
-          className="bg-[#fd0]! w-10! h-10! sm:w-[50px]! sm:h-[50px]! rounded-4xl! p-2! sm:p-3! flex! items-center! justify-center!"
+          className="bg-[#fd0]! w-10! h-10! rounded-4xl! p-2! flex! items-center! justify-center!"
         >
-          <img className="w-5 h-[23px] sm:h-6" src={User} alt="user" />
+          <img className="w-5 h-[23px]" src={User} alt="user" />
         </Button>
       </div>
       <Modal
-        className="rounded-[0.5rem] sm:rounded-[0.75rem] flex justify-center font-sans"
-        classNames={{ content: "mt-40 sm:mt-52 md:mt-[209px]" }}
+        className="rounded-[0.5rem] flex justify-center font-sans"
+        classNames={{ content: "mt-40 " }}
         radius={"0.75rem"}
         // centered
         size={440}
@@ -374,14 +385,14 @@ const Header = () => {
         onClose={close}
         withCloseButton={false}
       >
-        <div className="m-2 sm:m-5 w-[280px] sm:w-[368px] h-[250px] sm:h-[322px]">
+        <div className="m-2 w-[280px] h-[250px] ">
           <div
             className="
               absolute
-              left-[-60px] sm:left-[-98px]
-              top-[60px] sm:top-[88px]
+              left-[-60px] 
+              top-[60px]
               w-full
-              h-[120px] sm:h-[154px]
+              h-[120px]
               bg-[#ffdd00] bg-opacity-100
               rotate-[-40deg]
               origin-top-left
@@ -390,7 +401,7 @@ const Header = () => {
           ></div>
           <div>
             <div className="w-full h-full">
-              <h4 className="text-xl sm:text-2xl md:text-[1.875rem] leading-7 sm:leading-8 md:leading-9 font-['SF_Pro_Display'] font-bold mb-4 sm:mb-5 md:mb-6">
+              <h4 className="text-xl leading-7 font-['SF_Pro_Display'] font-bold mb-4 ">
                 {t("header.Login")}
               </h4>
             </div>
@@ -406,7 +417,6 @@ const Header = () => {
                  px-6! py-4.5!
                  mb-5!
                  text-sm! font-medium! leading-5!
-                 lg:text-xl! lg:leading-7!
                  font-['SF_Pro_Display']!
               `,
                 }}
@@ -417,7 +427,7 @@ const Header = () => {
                   placeholder={t("header.Password")}
                   classNames={{
                     input:
-                      "border-none! h-full! w-auto! p-0! text-sm! font-medium! leading-5! lg:text-xl! lg:leading-7! font-['SF_Pro_Display']!",
+                      "border-none! h-full! w-auto! p-0! text-sm! font-medium! leading-5! font-['SF_Pro_Display']!",
                     wrapper: "w-full!",
                   }}
                 />
@@ -433,10 +443,10 @@ const Header = () => {
                  flex! items-center! justify-center!
                  bg-[#fd0]! text-black!
                  rounded-lg!
-                 px-6! sm:px-8! py-3! sm:py-4!
-                 text-lg! sm:text-[1.25rem]!
+                 px-6! py-3!
+                 text-lg! 
                  w-full!
-                 h-[50px]! sm:h-[60px]!
+                 h-[50px]!
                  font-bold!
                  font-['SF_Pro_Display']!
                "
@@ -445,7 +455,7 @@ const Header = () => {
               </Button>
             </form>
             <div
-              className="w-full modal-footer text-center sm:mt-5 font-medium leading-5 text-xl text-[#646464]
+              className="w-full modal-footer text-center font-medium leading-5 text-xl text-[#646464]
 "
             >
               {t("header.New_User")}{" "}
@@ -456,10 +466,7 @@ const Header = () => {
           </div>
         </div>
       </Modal>
-    {/* </div> */}
-      {/* <div className="w-[50px] h-[50px]">
-        <svg className="w-5 h-3.5" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="21" height="2" rx="1" fill="#BEBEBE"></rect> <rect y="6" width="21" height="2" rx="1" fill="#BEBEBE"></rect> <rect y="6" width="21" height="2" rx="1" fill="#BEBEBE"></rect> <rect y="12" width="21" height="2" rx="1" fill="#BEBEBE"></rect></svg>
-      </div> */}
+    </div>
     </div>
   );
 };

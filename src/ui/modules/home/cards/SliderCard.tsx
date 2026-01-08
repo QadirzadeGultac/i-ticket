@@ -36,7 +36,7 @@ const SliderCard = () => {
           //   height: 857,
           //   // filter: "drop-shadow(0 52px 94px rgba(0, 0, 0, .308949))",
           // }}
-          className="position relative pb-10! w-[90vw]! max-w-[1432px]! h-[857px] bg-transparent! border-0! pt-5!"
+          className="position! relative! pb-10! max-[1455px]:w-[95vw]! min-[1455px]:w-[1435px]! h-[857px] bg-transparent! border-0! pt-5! max-[1255px]:pt-50!"
 
         >
           <Button
