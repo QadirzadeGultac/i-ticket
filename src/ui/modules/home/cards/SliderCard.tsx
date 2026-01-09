@@ -1,17 +1,20 @@
-import { Card, Image, Button } from "@mantine/core";
-import SliderVM from "@/ui/modules/home/cards/SliderVM";
-import rightIcon from "@/assets/right-arrow.svg";
+// import { Image, Button } from "@mantine/core";
+import { Carousel } from "@mantine/carousel";
 import Header from "../../header/Header";
+import SliderVM from "./SliderVM";
+import arrowImg from "../../../../assets/right-arrow.svg";
 
 const SliderCard = () => {
-  const { img, prev, next } = SliderVM({ intervalMs: 3000 });
+  const { imgs, next, prev } = SliderVM({ intervalMs: 3000 });
 
   return (
     <div>
-      <div style={{ position: "absolute", top: 20, zIndex: 60 }}>
+      <div className="absolute top-5 z-60 max-[1255px]:relative max-[1255px]:top-0">
         <Header />
       </div>
-      <div className="flex relative justify-center">
+
+      <div className="flex relative justify-center items-center">
+        {/* Sarı dekorativ blok */}
         <div
           style={{
             width: "100%",
@@ -22,73 +25,79 @@ const SliderCard = () => {
             top: "30%",
             left: "-15%",
             zIndex: 0,
-            filter: "drop-shadow(0 52px 94px rgba(0, 0, 0, .308949))",
+            border: "none",
+            borderRadius: 20,
+            filter: "drop-shadow(0 52px 94px rgba(0,0,0,.30))",
           }}
           className="max-[1024px]:hidden"
-        ></div>
-        <Card
-          // style={{
-          //   position: "relative",
-          //   paddingLeft: 15,
-          //   backgroundColor: "transparent",
-          //   borderBlockColor: "none",
-          //   paddingTop: 20,
-          //   height: 857,
-          //   // filter: "drop-shadow(0 52px 94px rgba(0, 0, 0, .308949))",
-          // }}
-          className="position! relative! pb-10! max-[1455px]:w-[95vw]! min-[1455px]:w-[1435px]! h-[857px] bg-transparent! border-0! pt-5! max-[1255px]:pt-50!"
+        />
 
-        >
-          <Button
-            variant="light"
-            style={{
+        {/* Prev düyməsi */}
+
+        {/* Carousel tək slide göstərir */}
+        <Carousel
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            marginTop: 20,
+            width: "100%",
+            border: "none !important",
+            borderRadius: 10,
+          }}
+          nextControlProps={{
+            style: {
+              borderTopLeftRadius: 100,
+              borderBottomLeftRadius: 100,
+              backgroundColor: "#fd0",
+              width: 67,
+              height: 134,  
+              position: "absolute",
+              left: "83%",
+              zIndex: 10,
+            },
+          }}
+          previousControlProps={{
+            style: {
+              borderTopRightRadius: 100,
+              borderBottomRightRadius: 100,
+              backgroundColor: "#fd0",
               width: 67,
               height: 134,
-              textAlign: "end",
-              borderBottomLeftRadius: 9999,
-              borderTopLeftRadius: 9999,
-              backgroundColor: "#fd0",
               position: "absolute",
-              top: "49.2%",
-              left: 15,
-              transform: "translateY(-50%) rotate(180deg)",
+              left: "13.5%",
               zIndex: 10,
-            }}
-            onClick={prev}
-          >
-            <img style={{ width: 28, height: 28 }} src={rightIcon} alt="left" />
-          </Button>
-          <Image
-            src={img}
-            className="flex shadow-lg order-1"
-            radius="20px"
-            style={{ zIndex: 5, position: "relative" }}
-            alt="slide"
-          />
-          <Button
-            variant="light"
-            style={{
-              width: 67,
-              height: 134,
-              borderBottomLeftRadius: 9999,
-              borderTopLeftRadius: 9999,
-              textAlign: "start",
-              backgroundColor: "#fd0",
-              position: "absolute",
-              top: "49.2%",
-              right: 15,
-              transform: "translateY(-50%)",
-              zIndex: 10,
-            }}
-            onClick={next}
-          >
+            },
+          }}
+          slideSize="100%"
+          slideGap={0}
+          draggable
+          withIndicators
+          
+          nextControlIcon={
             <img
-              style={{ textAlign: "start", width: 28, height: 28 }}
-              src={rightIcon}
-              alt="right"
+              onClick={next}
+              src={arrowImg}
+              style={{ width: 20 }}
+              alt="next"
             />
-          </Button>
-        </Card>
+          }
+          previousControlIcon={
+            <img
+              onClick={prev}
+              src={arrowImg}
+              style={{
+                width: 20,
+                transform: "translateY(-5%) rotate(-180deg)",
+              }}
+              alt="prev"
+            />
+          }
+        >
+          <Carousel.Slide>
+            <img src={imgs} alt="" />
+          </Carousel.Slide>
+        </Carousel>
       </div>
     </div>
   );

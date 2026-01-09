@@ -55,7 +55,7 @@ const SliderVM = ({ intervalMs = 3000 }) => {
   // console.log("ACTIVE IMG:", imgs[currentIndex]);
 
   return {
-    img: imgs[currentIndex],
+    imgs: imgs[currentIndex],
     prev,
     next,
   };

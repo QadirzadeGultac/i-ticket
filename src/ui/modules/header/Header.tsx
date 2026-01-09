@@ -13,21 +13,23 @@ const Header = () => {
     // <div>
     <div
       className="
-    max-[1255px]:p-4
-
+    max-[1255px]:px-4
+    min-[1255px]:py-5.5
+    max-[1500px]:px-14
+    min-[1255px]:px-14
     w-screen
   "
     >
       <div className="
     flex items-center justify-center
-    mx-70
+    mx-52
     px-4
     py-4
     font-['SF_Pro_Display']
     max-[1500px]:mx-0
     max-[1255px]:bg-white
-    max-[1255px]:h-[50px]
-    max-[1255px]:justify-between">
+    max-[1255px]:justify-between
+">
       <div className="w-[50px] h-[50px] min-[1255px]:hidden flex items-center justify-center">
         <svg className="w-5 h-3.5" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="21" height="2" rx="1" fill="#BEBEBE"></rect> <rect y="6" width="21" height="2" rx="1" fill="#BEBEBE"></rect> <rect y="6" width="21" height="2" rx="1" fill="#BEBEBE"></rect> <rect y="12" width="21" height="2" rx="1" fill="#BEBEBE"></rect></svg>
       </div>
