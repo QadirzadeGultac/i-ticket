@@ -13,7 +13,7 @@ const SliderCard = () => {
         <Header />
       </div>
 
-      <div className="flex relative justify-center items-center">
+      <div className="flex relative justify-center items-center min-[1024px]:px-5 min-[1024px]:pt-5 min-[1024px]:pb-10">
         {/* Sarı dekorativ blok */}
         <div
           style={{
@@ -36,49 +36,22 @@ const SliderCard = () => {
 
         {/* Carousel tək slide göstərir */}
         <Carousel
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            marginTop: 20,
-            width: "100%",
-            border: "none !important",
-            borderRadius: 10,
-          }}
+        className="flex! relative! mt-5! rounded-[10px]! min-[1024px]:mt-0!"
           nextControlProps={{
-            style: {
-              borderTopLeftRadius: 100,
-              borderBottomLeftRadius: 100,
-              backgroundColor: "#fd0",
-              width: 67,
-              height: 134,  
-              position: "absolute",
-              left: "83%",
-              zIndex: 10,
-            },
+            className: "absolute! top-[42%] right-0! z-10! w-16! h-33! rounded-tl-[100px]! rounded-bl-[100px]! bg-[#ffdd00]! flex! justify-center! items-center!  max-[1025px]:hidden!"
           }}
           previousControlProps={{
-            style: {
-              borderTopRightRadius: 100,
-              borderBottomRightRadius: 100,
-              backgroundColor: "#fd0",
-              width: 67,
-              height: 134,
-              position: "absolute",
-              left: "13.5%",
-              zIndex: 10,
-            },
+            className: "absolute! top-[42%] left-0! z-10! w-16! h-33! rounded-tr-[100px]! rounded-br-[100px]! bg-[#ffdd00]! flex! justify-center! items-center!  max-[1025px]:hidden!"
           }}
           slideSize="100%"
           slideGap={0}
           draggable
           withIndicators
-          
           nextControlIcon={
             <img
               onClick={next}
               src={arrowImg}
-              style={{ width: 20 }}
+              className="w-4"
               alt="next"
             />
           }
@@ -86,16 +59,13 @@ const SliderCard = () => {
             <img
               onClick={prev}
               src={arrowImg}
-              style={{
-                width: 20,
-                transform: "translateY(-5%) rotate(-180deg)",
-              }}
+              className="w-4 -translate-y-[5%] -rotate-180"
               alt="prev"
             />
           }
         >
-          <Carousel.Slide>
-            <img src={imgs} alt="" />
+          <Carousel.Slide className="max-[1024px]:rounded-0!">
+            <img className="rounded-[20px] max-[1024px]:rounded-none!" src={imgs} alt="img" />
           </Carousel.Slide>
         </Carousel>
       </div>

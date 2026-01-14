@@ -6,6 +6,9 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [react(), tailwindcss(), tsconfigPaths()],
+  server: {
+    open: true,
+  },
   base: "/i-ticket/",
   resolve: {
     alias: {
