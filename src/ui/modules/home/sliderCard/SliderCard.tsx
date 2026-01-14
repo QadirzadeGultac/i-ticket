@@ -12,7 +12,7 @@ const SliderCard = () => {
       <div className="absolute top-5 z-60 max-[1255px]:relative max-[1255px]:top-0">
         <Header />
       </div>
-
+    
       <div className="flex relative justify-center items-center min-[1024px]:px-5 min-[1024px]:pt-5 min-[1024px]:pb-10">
         {/* Sarı dekorativ blok */}
         <div

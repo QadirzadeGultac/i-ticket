@@ -1,12 +1,13 @@
 import React from 'react'
-import SliderCard from './cards/SliderCard'
-import PopularEvents from './popularevents/PopularEvents'
+import SliderCard from './sliderCard/SliderCard'
+import Cards from './cards/Cards'
+
 // import Header from '../header/Header'
 const Home = () => {
   return (
     <div>
         <SliderCard/>
-        <PopularEvents  />
+        <Cards/>
     </div>
   )
 }
