@@ -10,8 +10,8 @@ const SliderVM = ({ intervalMs = 3000 }) => {
     const loadImgs = async () => {
       const arr = [];
 
-      for (let i = 0; i < 7; i++) {
-        const data = await fetchPromotionById(0, i);
+      for (let i = 0; i < fetchPromotionById.length; i++) {
+        const data = await fetchPromotionById(i);
 
         // console.log("API DATA", data); // BURDA URL-lər görünür
 

@@ -1,10 +1,10 @@
 import { getPromotion } from "@/app/lib/http";
 
-export const fetchPromotionById = async (index: number, itemIndex: number) => {
-  return await getPromotion(index, itemIndex);
+export const fetchPromotionById = async (itemIndex: number) => {
+  return await getPromotion(itemIndex);
 };
 import { getCards } from "@/app/lib/http";
 
-export const fetchCardsById = async (index: number, itemIndex: number) => {
-  return await getCards(index, itemIndex);
+export const fetchCardsById = async (itemIndex: number) => {
+  return await getCards(itemIndex);
 };

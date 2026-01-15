@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // GET API funksiyası
-export const getPromotion = async (index: number, itemIndex: number) => {
+export const getPromotion = async (itemIndex: number) => {
   try {
     const res = await axios.get("https://api.iticket.az/en/v5/promotions?client=web");
     // console.log("Promotion data:", res.data.response[index].items[itemIndex].data.slide_url);
@@ -10,10 +10,11 @@ export const getPromotion = async (index: number, itemIndex: number) => {
     console.error("Xəta baş verdi:", error);
   }
 };
-export const getCards = async (index: number, itemIndex: number) => {
+export const getCards = async (itemIndex: number) => {
   try {
     const res = await axios.get("https://api.iticket.az/en/v5/promotions?client=web");
-    return res.data.response[1].items[itemIndex].data.poster_bg_url;
+    console.log("Cards data:", res.data.response[1].items[itemIndex]);
+    return res.data.response[1].items[itemIndex];
   } catch (error) {
     console.error("Xəta baş verdi:", error);
   }
