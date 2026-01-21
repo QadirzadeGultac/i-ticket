@@ -25,6 +25,7 @@ const Header = () => {
     flex items-center justify-center
     px-3
     py-3
+    ml-52
     font-['SF_Pro_Display']
     max-[1500px]:mx-0
     max-[1255px]:bg-white

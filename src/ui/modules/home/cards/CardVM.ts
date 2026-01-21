@@ -28,7 +28,7 @@ const CardVM = () => {
 
     datas();
   }, []);
-
+  
   return {
     cardsData,
     bgCardsData,
