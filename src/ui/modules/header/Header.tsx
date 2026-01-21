@@ -23,7 +23,6 @@ const Header = () => {
       <div
         className="
     flex items-center justify-center
-    mx-52
     px-3
     py-3
     font-['SF_Pro_Display']
