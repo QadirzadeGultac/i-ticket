@@ -12,10 +12,19 @@ export const getPromotion = async (itemIndex: number) => {
 };
 export const getCards = async (itemIndex: number) => {
   try {
-    const res = await axios.get("https://api.iticket.az/en/v5/promotions?client=web");
-    console.log("Cards data:", res.data.response[1].items[itemIndex]);
-    return res.data.response[1].items[itemIndex];
+    const res = await axios.get(
+      "https://api.iticket.az/en/v5/promotions?client=web"
+    );
+
+    const items = res.data?.response?.[1]?.items;
+    
+    if (!items || !items[itemIndex]) {
+      console.warn("Item tapılmadı:", itemIndex);
+      return null;
+    }
+    return items[itemIndex]; // ⬅️ bütün item qaytarırıq
   } catch (error) {
     console.error("Xəta baş verdi:", error);
+    return null; // ⬅️ ÇOX VACİB
   }
 };

@@ -1,23 +1,27 @@
+"use client";
+
 import { fetchCardsById } from "@/app/api/slider-card.api";
 import { useEffect, useState } from "react";
-const CardVM = () => {
-    const [cardsData, setCardsData] = useState<string[]>([]);
-    useEffect(()=>{
-        const datas = async () => {
-         const cardData = [];
-
-    for(let i=0; i<20; i++){
+const useCardVM = () => {
+  const [cardsData, setCardsData] = useState<string[]>([]);
+  const [bgCardsData, setBgCardsData] = useState<string[]>([]);
+  useEffect(() => {
+    const loadData = async () => {
+      const cardData: string[] = [];
+      const bgCardData: string[] = [];
+      for (let i = 0; i < 11; i++) {
         const data = await fetchCardsById(i);
-        cardData.push(data.data);
-    }
-setCardsData(cardData);
-}
 
-datas();
- }, []);
-    return {
-        cardsData
+        if (data?.data?.poster_bg_url) {
+          cardData.push(data.data.poster_bg_url);
+          bgCardData.push(data.data.poster_bg_url);
+        }
+      }
+      setCardsData(cardData);
+      setBgCardsData(bgCardData);
     };
+    loadData();
+  }, []);
+  return { cardsData, bgCardsData };
 };
-
-export default CardVM;
+export default useCardVM;
