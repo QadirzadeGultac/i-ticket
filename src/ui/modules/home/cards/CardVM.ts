@@ -1,3 +1,5 @@
+"use client";
+
 import { fetchCardsById } from "@/app/api/slider-card.api";
 import { useEffect, useState } from "react";
 

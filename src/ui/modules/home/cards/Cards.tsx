@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect, useCallback } from "react";
 import { EmblaCarouselType } from "embla-carousel";
 import { Carousel } from '@mantine/carousel';
@@ -58,6 +57,6 @@ const Cards = () => {
       <Progress value={scrollProgress} maw={320} size="sm" mt="xl" mx="auto" />
     </div>
   );
-};
+} ;
 
 export default Cards;
