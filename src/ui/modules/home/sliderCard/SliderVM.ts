@@ -7,14 +7,13 @@ const SliderVM = ({ intervalMs = 3000 }) => {
   useEffect(() => {
     const loadImgs = async () => {
       const arr = [];
-      for (let i = 0; i < 10; i++) {
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < 9; i++) {
         const data = await fetchPromotionById(i);
         arr.push(data);
-      }
 
+    };
       setImgs(arr);
-    };}
+    };
     loadImgs();
   }, []);
   useEffect(() => {

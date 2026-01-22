@@ -37,6 +37,7 @@ const SliderCard = () => {
         {/* Carousel tək slide göstərir */}
         <Carousel
         unstyled
+        
         className="flex! relative! mt-5! rounded-[10px]! min-[1024px]:mt-0!"
           nextControlProps={{
             className: "absolute! top-[42%] right-0! z-10! w-16! h-33! rounded-tl-[100px]! rounded-bl-[100px]! bg-[#ffdd00]! flex! justify-center! items-center!  max-[1025px]:hidden!"
